@@ -1,0 +1,28 @@
+/* Убираем верхний баннер Google Translate */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+  }
+  body {
+    top: 0px !important; /* Убирает отступ от убранного баннера */
+  }
+  
+  /* Убираем тултипы от Google Translate */
+  .goog-tooltip,
+  .goog-tooltip:hover {
+    display: none !important;
+  }
+  
+  /* Убираем фон выделения переведённых слов */
+  .goog-text-highlight {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  /* Прячем логотип и меню Google внизу */
+  #goog-gt-tt,
+  .goog-te-balloon-frame,
+  .goog-te-menu-frame,
+  .goog-te-gadget-icon {
+    display: none !important;
+  }
+  

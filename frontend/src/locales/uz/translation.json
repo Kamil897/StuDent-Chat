@@ -1,0 +1,744 @@
+{
+    "menu": {
+      "group": "Guruh",
+      "news": "AI uchun ko'rsatmalar",
+      "login": "Kirish",
+      "register": "Registrasiya"
+
+    },
+
+    "help": "Yordam markazi – kimlar uchun?",
+    "text_cursor": "talabalarga!",
+    "actions_section_title": "Qanday yordam bera olasiz",
+
+    "about": {
+      "title": "Biz haqimizda",
+      "description": "Ushbu platformani bilimga, ishonchga va yangi yutuqlarga intilayotganlar uchun yaratdik. Bu yerda siz o‘qish, muloqot va ta’lim muassasalariga, kollej yoki universitetga kirishda kerakli barcha yordamni topasiz. Bizning loyihamiz — orzular rejalarga, rejalar esa haqiqatga aylanadigan joy!"
+    },
+
+    "actions": {
+      "mentor": {
+        "title": "Ustoz bo‘lish",
+        "content": "Boshqalarga foydali ko‘nikmalarni egallashda yordam berish orqali o‘z bilimingiz va tajribangizni ulashing. Mintaqangizdagi ta’lim dasturlariga qo‘shiling va ta’lim hamjamiyatini rivojlantiring."
+      },
+      "support": {
+        "title": "Loyihani qo‘llab-quvvatlash",
+        "content": "Dasturlarimiz haqida do‘stlaringiz va tanishlaringizga ayting, tadbirlarda ishtirok eting va sifatli ta’lim g‘oyalarini jamiyatda targ‘ib qiling."
+      },
+      "learn": {
+        "title": "O‘qishni boshlash",
+        "content": "Qiziqarli kurslar va mahorat darslarini tanlang, bilim doirangizni kengaytiring va yangi yo‘nalishlarni kashf eting. O‘qish — bu oson va ilhomlantiruvchi!"
+      }
+    },
+        
+    
+    "how_we_help": {
+      "title": "Qanday YORDAM bera olamiz",
+      "sections": {
+        "community": {
+          "title": "Muloqot va o‘zaro yordam",
+          "content": "Biz faqatgina ma’lumotlar platformasi emasmiz — bu yerda har kim o‘z tajribasini bo‘lishishi va boshqalarning hikoyalaridan ilhom olishi mumkin."
+        },
+        "flexibility": {
+          "title": "Moslashuvchan o‘rganish",
+          "content": "Siz qanday o‘rganishni o‘zingiz tanlaysiz: onlayn darslarda qatnashish, test topshirish yoki dars yozuvlarini ko‘rish."
+        },
+        "skills": {
+          "title": "Ko‘nikmalarni rivojlantirish",
+          "content": "Kirish imtihonlaridan tashqari, biz sizga hayot va o‘qish uchun foydali ko‘nikmalarni rivojlantirishda yordam beramiz: jamoada ishlash, omma oldida nutq so‘zlash, muammolarni hal qilish va vaqtni boshqarish."
+        }
+      }
+    },
+
+    "why_us": {
+      "title": "Nega bizni tanlashadi?",
+      "reasons": {
+        "availability": {
+          "title": "24/7 mavjudlik",
+          "content": "Biz doimo aloqadamiz! Siz xohlagan vaqtingizda savollar berishingiz, yordam olishingiz va javob topishingiz mumkin."
+        },
+        "mentors": {
+          "title": "Eng yaxshi ustozlar",
+          "content": "Tajribali mutaxassislar sizga murakkab mavzularni tushunishda, o‘quv rejasini tuzishda va muhim imtihonlarga tayyorgarlik ko‘rishda yordam beradi."
+        },
+        "safe_space": {
+          "title": "Xavfsiz va samimiy muhit",
+          "content": "Platformamizda muloqot qulay va hurmatli bo‘lishi uchun doimo nazorat qilinadi. Siz bu yerda o‘zingiz bo‘lib, fikr va g‘oyalaringizni qo‘rqmasdan baham ko‘rishingiz mumkin."
+        }
+      }
+    },
+
+    "news_menu": {
+      "all": "Barcha yangiliklar",
+      "problems": "Muammolar",
+      "solution": "Yechim",
+      "future": "Kelajak"
+    }, 
+    
+    "footer": {
+      "groups": "Guruhlar",
+      "news": "AI uchun ko'rsatmalar",
+      "institutions": "Institutlar",
+      "ai_assistant": "StuDent AI",
+      "account": "Mening akkauntim",
+      "slogan": "O‘rgan. Muloqot qil. Rivojlan."
+    },
+
+    "chat": {
+      "select_chat": "Suhbatni tanlang:",
+      "chat_id": "Chat ID",
+      "choose_prompt": "Chat tanlang",
+      "chat": "Chat",
+      "add_chat": "Chat qo‘shish",
+      "back_to_chats": "Chatlarga qaytish",
+      "write_message": "Xabar yozing...",
+      "send": "Yuborish"
+    },
+
+    "teachers_card": {
+      "teaches": "Dars beradi:",
+      "bio": "Botirjon Tojiboev bilan tanishing — tadbirlar bo‘limi rahbari va davlat maktabi bitiruvchisi. U musiqa, san’at, koinot va o‘qitishga qiziqadi. Botirjon pianino va gitara chalishni yaxshi ko‘radigan san’atkordir.",
+      "contacts": "Aloqalar",
+      "socials": "Ijtimoiy tarmoqlar",
+      "close": "Yopish"
+    },
+
+    "teachers_hero": {
+      "all": "Barchasi",
+      "russian": "Rus tili",
+      "english": "Ingliz tili",
+      "german": "Nemis tili",
+      "french": "Fransuz tili",
+      "no_results": "Bu til bo‘yicha o‘qituvchilar topilmadi..."
+    },
+
+    "ai_chat": {
+      "chats": "Chatlar",
+      "new_chat": "Yangi chat",
+      "chat": "Chat",
+      "settings": "Sozlamalar",
+      "welcome": "Cognia ga xush kelibsiz!",
+      "start_prompt": "Savolingizni pastga yozib boshlang.",
+      "input_placeholder": "Xabaringizni yozing...",
+      "thinking": "O‘ylayapman",
+      "no_reply": "AI javob bermadi",
+      "connection_error": "Ulanishda xatolik. Qayta urinib ko‘ring.",
+  
+      "settings_title": "AI Sozlamalari",
+      "theme": "Mavzu",
+      "light": "Yorug‘",
+      "dark": "Qorong‘i",
+      "reply_style": "Javob uslubi",
+      "style_normal": "Oddiy",
+      "style_detailed": "Batafsil",
+      "style_creative": "Ijodiy",
+      "clear_history": "Chat tarixini tozalash",
+      "close": "Yopish"
+    },
+
+    "main": {
+      "first_name": "Ism",
+      "last_name": "Familiya",
+      "hobby": "Hobbi",
+      "education": "Ta'lim/Ish",
+      "loading": "Yuklanmoqda..."
+    },
+
+    "dock": {
+      "home": "Bosh sahifa",
+      "edit": "Tahrirlash",
+      "shop": "Do'kon",
+      "games": "O'yinlar",
+      "logout": "Chiqish",
+      "privilege": "IMTIYOZ",
+      "title": "UNVON",
+      "admin": "Admin",
+      "moderator": "Moderator",
+      "user": "Foydalanuvchi",
+      "newbie": "Yangi",
+      "experienced": "Tajribalangan",
+      "veteran": "Veteran"
+    },
+
+    "login": {
+      "title": "Kirish",
+      "username": "Foydalanuvchi nomi",
+      "password": "Parol",
+      "username_placeholder": "Foydalanuvchi nomini kiriting",
+      "password_placeholder": "Parolni kiriting",
+      "login_button": "Kirish",
+      "no_account": "Hisobingiz yo‘qmi?",
+      "register_link": "Ro‘yxatdan o‘tish",
+      "user_not_found": "Foydalanuvchi topilmadi",
+      "incorrect_password": "Noto‘g‘ri parol",
+      "success": "Muvaffaqiyatli kirildi!"
+    },
+
+    "register": {
+      "avatar": "Avatar",
+      "first_name": "Ism",
+      "enter_first_name": "Ismingizni kiriting",
+      "last_name": "Familiya",
+      "enter_last_name": "Familiyangizni kiriting",
+      "email": "Email",
+      "enter_email": "Email manzilingizni kiriting",
+      "hobby": "Xobbi",
+      "enter_hobby": "Xobbiyingizni kiriting",
+      "education": "Ta'lim / Ish",
+      "enter_education": "Ta'lim yoki ish joyingiz",
+      "birth": "Tug'ilgan sana (ixtiyoriy)",
+      "username": "Foydalanuvchi nomi",
+      "enter_username": "foydalanuvchi_nomi",
+      "password": "Parol",
+      "enter_password": "Parol kiriting",
+      "register_button": "Ro‘yxatdan o‘tish",
+      "have_account": "Allaqachon akkauntingiz bormi?",
+      "login_link": "Kirish",
+      "already_exists": "Bunday foydalanuvchi nomi allaqachon mavjud",
+      "success": "Ro'yxatdan o'tish muvaffaqiyatli!"
+    },
+
+    "shop": {
+      "title": "Imtiyozlar do‘koni",
+      "available": "Mavjud: {{count}} ta / {{total}} ta mahsulot",
+      "balance": "Balans",
+      "spent": "Sarflangan",
+      "bought": "Sotib olingan ({{count}})",
+      "searchPlaceholder": "Mahsulot qidiring...",
+      "filter": "Filtr:",
+      "all": "Barchasi ({{count}})",
+      "affordable": "Mavjudlar ({{count}})",
+      "unaffordable": "Mavjud emas ({{count}})",
+      "purchased": "Sotib olinganlar ({{count}})",
+      "sort": "Saralash:",
+      "sortName": "Nomi bo‘yicha",
+      "sortLow": "Avval arzonlari",
+      "sortHigh": "Avval qimmatlari",
+      "sortRarity": "Noyobligi bo‘yicha",
+      "legendary": "Afsonaviy",
+      "rare": "Noyob",
+      "purchasedLabel": "Sotib olingan",
+      "empty": "Mahsulotlar topilmadi",
+      "emptySearch": "\"{{query}}\" bo‘yicha hech narsa topilmadi",
+      "emptyCategory": "Bu toifadagi mahsulotlar hozircha yo‘q",
+      "clearSearch": "Qidiruvni tozalash",
+      "success": "muvaffaqiyatli sotib olindi!",
+      "insufficientFunds": "❌ Yetarli ball mavjud emas!",
+      "statsTitle": "Sotib olish statistikasi",
+      "statsPurchased": "Sotib olingan mahsulotlar",
+      "statsSpent": "Sarflangan ballar",
+      "statsCollection": "Kolleksiya",
+      "buypoints":"Ball sotib olish"
+    },
+
+    "bought": {
+      "title": "Mening xaridlarim",
+      "points": "ballar",
+      "back": "Orqaga",
+      "remove": "O'chirish",
+      "empty": "Siz hali hech narsa sotib olmadingiz."
+    },
+
+    "shop_2": {
+      "buy": "Sotib olish",
+      "purchasedLabel": "Sotib olingan",
+      "details": "Batafsil"
+    },
+
+    "products": {
+      "rainbow": {
+        "name": "Kamalak",
+        "description": "Yorqin ranglar, ijobiylik va erkinlik!"
+      },
+      "luxary": {
+        "name": "Oddiy lekin boyona",
+        "description": "Sodda va nafis dizayn."
+      },
+      "omg": {
+        "name": "OMG",
+        "description": "Vau-effekt kafolatlangan!"
+      },
+      "kitty": {
+        "name": "Mushukchalar",
+        "description": "Myau-myau! Ushbu imtiyoz bilan siz yumshoq qulaylikka ega bo‘lasiz."
+      }
+    },
+
+    "product": {
+      "notFound": "Mahsulot topilmadi",
+      "success": "Sotib olindi!",
+      "fail": "Ballar yetarli emas!",
+      "bought": "Sotib olingan",
+      "buy": "Sotib olish",
+      "notEnough": "Yetarli ball yo'q",
+      "back": "Orqaga",
+      "points": "ball"
+    },
+
+      "games.back": "Orqaga",
+      "games.progress": "Jarayon:",
+      "games.noGamesFound": "Hech qanday o'yin topilmadi",
+      "games.playNow": "Hozir o'ynang",
+      "games.congratsTitle": "Tabriklaymiz! 🎉",
+      "games.congratsText": "Maksimal darajaga yetdingiz!",
+      "games.close": "Yopish",
+    
+      "games.categories.all": "Barchasi",
+      "games.categories.classic": "Klassik",
+      "games.categories.board": "Stol o'yinlari",
+      "games.categories.action": "Harakat",
+      "games.categories.educational": "Ta'limiy",
+      "games.categories.arcade": "Arkad",
+      "games.categories.sports": "Sport",
+      "games.categories.myTituls": "Mening unvonlarim",
+    
+      "games.list": [
+        {
+          "id": 2,
+          "name": "Iloncha",
+          "description": "Klassik ilon oʻyini...",
+          "link": "/Snake",
+          "image": "/snake.png",
+          "category": "Classic"
+        },
+        {
+          "id": 3,
+          "name": "X O",
+          "description": "Doʻstlaringiz bilan oʻynang...",
+          "link": "/TicTacToe",
+          "image": "/tictactoe.png",
+          "category": "Board"
+        },
+        {
+          "id": 4,
+          "name": "Tir",
+          "description": "Aniqligingizni sinab koʻring...",
+          "link": "/Tir",
+          "image": "https://storage.needpix.com/rsynced_images/archery-152912_1280.png",
+          "category": "Action"
+        },
+        {
+          "id": 5,
+          "name": "Bilim labirinti",
+          "description": "Labirintdan oʻting va oʻrganing...",
+          "link": "/KnowledgeMaze",
+          "image": "/maze.png",
+          "category": "Educational"
+        },
+        {
+          "id": 6,
+          "name": "Matematika janggi",
+          "description": "Tez hisoblashni mashq qiling...",
+          "link": "/MathBattle",
+          "image": "/math.png",
+          "category": "Educational"
+        },
+        {
+          "id": 7,
+          "name": "Qaychi, tosh, qogʻoz",
+          "description": "Omadga asoslangan oʻyin...",
+          "link": "/don",
+          "image": "/don.png",
+          "category": "Classic"
+        },
+        {
+          "id": 8,
+          "name": "Kosmik hujumchilar",
+          "description": "Yer yuzini himoya qiling...",
+          "link": "/inviders",
+          "image": "/space.png",
+          "category": "Arcade"
+        },
+        {
+          "id": 9,
+          "name": "Ping-pong",
+          "description": "Reflekslaringizni sinab koʻring...",
+          "link": "/pingpong",
+          "image": "/ping.png",
+          "category": "Sports"
+        },
+        {
+          "id": 10,
+          "name": "Meteoritlar",
+          "description": "Koinot kemasini boshqaring...",
+          "link": "/meteors",
+          "image": "/meteor.png",
+          "category": "Action"
+        },
+        {
+          "id": 11,
+          "name": "Unvonlar",
+          "description": "Sizning yutuqlaringiz va mukofotlaringiz",
+          "link": "/MyTituls",
+          "image": "/titules.png",
+          "category": "My tituls"
+        }
+      ],
+
+      "titles": {
+        "back": "Orqaga",
+        "yourTitles": "Sizning unvonlaringiz",
+        "congrats": "Tabriklaymiz! Siz unvonga ega bo'ldingiz",
+        "locked": "unvon bloklangan 🔒",
+        "snake": {
+          "title": "Ilon ustasi 🐍",
+          "requirement": "Ilonda 20 ball to'plash"
+        },
+        "rps": {
+          "title": "RPS chempioni ✊✋✌️",
+          "requirement": "Qog'oz-Qaychi-Tosh o'yinida 30 marta yutish"
+        },
+        "flappy": {
+          "title": "100-darajali uchuvchi 🐤",
+          "requirement": "Flappy Bird’da 100 ball to'plash"
+        }
+      },
+
+      "snake": {
+        "title": "Ilon",
+        "play": "O‘ynash",
+        "settings": "Sozlamalar",
+        "exit": "Chiqish",
+        "gameOver": "O'yin tugadi",
+        "playAgain": "Qayta o‘ynash",
+        "score": "Hisob",
+        "bestScore": "Eng yaxshi natija",
+        "timeLeft": "Qolgan vaqt",
+        "menu": "Menyu",
+        "instructions": {
+          "mobile": "Mobil: ekran tugmalari yoki svaypni ishlating",
+          "desktop": "Kompyuter: tugmachalar yoki WASD bilan boshqaring"
+        }
+      },
+
+      "rps": {
+        "title": "Qoya, Qaychi, Qog'oz",
+        "wins": "G'alabalar",
+        "ties": "Duranglar",
+        "losses": "Yutqazishlar",
+        "yourChoice": "Sizning tanlovingiz",
+        "computerChoice": "Kompyuter tanlovi",
+        "result": {
+          "win": "Siz yutdingiz!",
+          "tie": "Durang!",
+          "lose": "Kompyuter yutdi!"
+        },
+        "chooseAgain": "Yana tanlang",
+        "back": "Ortga"
+      },
+
+      "tictactoe": {
+        "chooseSymbol": "Qaysi belgini tanlaysiz?",
+        "or": "Yoki",
+        "turn": {
+          "playerX": "o'yinchining navbati",
+          "playerO": "o'yinchining navbati",
+          "computer": "Kompyuterning navbati"
+        },
+        "result": {
+          "win": "Tabriklaymiz, siz yutdingiz!",
+          "lose": "Siz yutqazdingiz",
+          "draw": "Durrang"
+        },
+        "playAgain": "Yana o'ynash",
+        "changeSymbol": "Belgini o'zgartirish",
+        "exit": "O'yinlar menyusiga chiqish",
+        "reset": "Qayta boshlash"
+      },
+
+      "tir.title": "Otish o‘yini",
+      "tir.play": "O‘ynash",
+      "tir.settings": "Sozlamalar",
+      "tir.settings_alert": "Sozlamalar tez orada mavjud bo‘ladi!",
+      "tir.exit": "Chiqish",
+      "tir.score": "Hisob",
+      "tir.time": "Vaqt",
+      "tir.game_over": "O‘yin tugadi",
+      "tir.back": "Ortga",
+
+        "knowledge_maze": {
+          "back": "Orqaga",
+          "choose_category": "Kategoriya tanlang",
+          "play_again": "Qayta o'ynash",
+          "game_over": "O'yin tugadi!",
+          "score": "Sizning hisobingiz: {{score}}/{{total}}",
+          "attempts": "Urinishlar: {{count}}",
+          "categories": {
+            "География": "Geografiya",
+            "Наука": "Fan",
+            "История": "Tarix"
+          },
+          "questions": {
+            "География": [
+              { "q": "Fransiyaning poytaxti qaysi?", "options": ["Berlin", "Madrid", "Parij", "Rim"], "answer": "Parij" },
+              { "q": "Dunyoning eng baland tog'i qaysi?", "options": ["Kilimanjaro", "Elbrus", "Everest", "Mak-Kinli"], "answer": "Everest" },
+              { "q": "Yaponiyaning poytaxti nima?", "options": ["Tokio", "Seul", "Pekin", "Bangkok"], "answer": "Tokio" },
+              { "q": "Yerda nechta okean bor?", "options": ["4", "3", "7", "5"], "answer": "5" },
+              { "q": "Dunyoning eng uzun daryosi qaysi?", "options": ["Amazonka", "Nil", "Yantszi", "Missisipi"], "answer": "Nil" },
+              { "q": "Eng sovuq qit'a qaysi?", "options": ["Osiyo", "Antarktida", "Yevropa", "Shimoliy Amerika"], "answer": "Antarktida" },
+              { "q": "Buyuk Xitoy devori qaysi mamlakatda joylashgan?", "options": ["Xitoy", "Yaponiya", "Hindiston", "Mongoliya"], "answer": "Xitoy" },
+              { "q": "Eng katta okean qaysi?", "options": ["Atlantika", "Hind", "Shimoliy Muz", "Tinch"], "answer": "Tinch" }
+            ],
+            "Наука": [
+              { "q": "'O' elementi qanday ataladi?", "options": ["Kislorod", "Oltin", "Qalay", "Osmiy"], "answer": "Kislorod" },
+              { "q": "Odamlar asosan qanday gazni nafas oladi?", "options": ["Kislorod", "Azot", "Uglerod gazi", "Vodorod"], "answer": "Azot" },
+              { "q": "Qaysi aʼzo qon filtrlash uchun masʼul?", "options": ["Buyraklar", "Jigar", "O‘pka", "Yurak"], "answer": "Buyraklar" },
+              { "q": "Quyosh sistemasida nechta sayyora bor?", "options": ["7", "9", "8", "11"], "answer": "8" },
+              { "q": "Tortishish qonunini kim kashf qilgan?", "options": ["Eynshteyn", "Nyuton", "Galiley", "Kopernik"], "answer": "Nyuton" },
+              { "q": "Eng sodda kimyoviy reaksiya qaysi?", "options": ["Oksidlanish", "Yonish", "Fotosintez", "Bug‘lanish"], "answer": "Bug‘lanish" },
+              { "q": "Qaysi tana qismida eng ko‘p suyak mavjud?", "options": ["Qo‘l", "Oyoq panjasi", "Umurtqa", "Bosh"], "answer": "Oyoq panjasi" },
+              { "q": "Eng issiq sayyora qaysi?", "options": ["Mars", "Yupiter", "Venera", "Merkuriy"], "answer": "Venera" }
+            ],
+            "История": [
+              { "q": "'Urush va tinchlik' asarini kim yozgan?", "options": ["Dostoevskiy", "Tolstoy", "Pushkin", "Chexov"], "answer": "Tolstoy" },
+              { "q": "Ikkinchi jahon urushi qachon boshlangan?", "options": ["1914", "1939", "1941", "1945"], "answer": "1939" },
+              { "q": "Fransuz inqilobi qachon bo'lgan?", "options": ["1789", "1812", "1848", "1917"], "answer": "1789" },
+              { "q": "AQShning birinchi prezidenti kim?", "options": ["Jefferson", "Washington", "Lincoln", "Roosevelt"], "answer": "Washington" },
+              { "q": "Barutni qaysi mamlakat ixtiro qilgan?", "options": ["Xitoy", "Gretsiya", "Rim", "Fransiya"], "answer": "Xitoy" },
+              { "q": "SSSR qachon parchalangan?", "options": ["1985", "1991", "2000", "1975"], "answer": "1991" },
+              { "q": "Mo‘g‘ullar imperiyasining asoschisi kim?", "options": ["Chingizxon", "Attila", "Temurlan", "Kublayxon"], "answer": "Chingizxon" },
+              { "q": "Birinchi kosmik itning ismi nima edi?", "options": ["Belka", "Strelka", "Layka", "Muxtor"], "answer": "Layka" }
+            ]
+          }
+        },
+        
+        "math_battle.title": "Math Battle",
+        "math_battle.subtitle": "Solve the problem as quickly as you can!",
+        "math_battle.your_health": "Your Health: {{player}} | Bot's Health: {{bot}}",
+        "math_battle.attack": "Attack",
+        "math_battle.you_won": "You won!",
+        "math_battle.you_lost": "You lost!",
+        "math_battle.back": "Back",
+        "math_battle.choose_difficulty": "Choose a difficulty level",
+        "math_battle.grade_5": "5th Grade",
+        "math_battle.grade_8": "8th Grade",
+        "math_battle.grade_11": "11th Grade",
+        "math_battle.hit": "Hit! You dealt {{damage}} damage.",
+        "math_battle.miss": "Missed! The bot hits you for {{damage}} damage.",
+        
+        "space": {
+          "win": "G'alaba! 🎉",
+          "lose": "Yutqazdingiz 💀",
+          "back": "← Orqaga",
+          "restart": "Qayta o'ynash"
+        },
+
+        "doom.title": "Meteoritlar",
+        "doom.start": "Yangi o'yin",
+        "doom.exit": "Chiqish",
+        "doom.settings": "Sozlamalar",
+        "doom.asteroids": "Meteoritlar",
+        "doom.ship_color": "Kema rangi",
+        "doom.asteroid_color": "Meteorit rangi",
+        "doom.restart": "Qayta boshlash",
+        "doom.score": "Hisob",
+        "doom.game_over": "O'yin tugadi",
+        "doom.win": "Siz yutdingiz!",
+
+        "editTitle": "Profilni tahrirlash",
+        "saveChanges": "O'zgarishlarni saqlash",
+        "labels": {
+          "firstName": "Ism",
+          "lastName": "Familiya",
+          "hobby": "Xobbi",
+          "education": "Ta'lim/Ish",
+          "avatarBorders": "Avatar ramkasi uslubi"
+        },
+        "avatarBorderOptions": {
+          "none": "Ramka yo‘q",
+          "rounded": "Yumaloq",
+          "circle": "Doira",
+          "bordered": "Ramkali"
+        },
+        "alertSaved": "O‘zgarishlar saqlandi!",
+
+
+        "news": {
+          "search": "Yangiliklardan izlash...",
+          "searchResults": "Qidiruv natijalari",
+          "all": "Barcha yangiliklar",
+          "society": "Jamiyat",
+          "tech": "Texnologiya",
+          "project": "Loyiha yangiliklari",
+          "other": "Boshqa yangiliklar",
+          "culture": "Madaniyat",
+          "notFound": "Hech narsa topilmadi",
+          "tryAnother": "Iltimos, qidiruv so‘rovini o‘zgartirib ko‘ring",
+      
+          "societyText": "Jamiyatga oid yangiliklar: tadbirlar, ijtimoiy tashabbuslar, intervyular va boshqalar.",
+          "techText1": "5-iyul kuni jamoamiz ITPU ochiq eshiklar kunida ishtirok etdi. Tadbir juda qiziqarli va foydali bo‘ldi. Bitiruvchilar duch keladigan muammolar va ularni hal qilish usullarimuhokama qilindi.",
+          "techText2": "14-iyun kuni jamoamiz School 21’dagi Fu**up Talks tadbirida qatnashdi. Spikerlar startaplardagi xatolar va muhim tajribalari bilan o‘rtoqlashdi. Juda foydali vailhomlantiruvchi edi.",
+          "cultureText": "17-may kuni Toshkentda O‘zbekiston tarixidagi ilk yirik Agile konferensiyasi bo‘lib o‘tdi — Agile Scale & Innovation 2025. Bizning startap ham unda ishtirok etdi. Ko‘plab foydali ma’lumotlar, yangi tanishuvlar va motivatsiya!"
+        },
+
+
+         "edu": {
+           "heading": "Taʼlim — Muammolar va Yechimlar",
+           "title1": "O‘zbekistondagi taʼlim tizimidagi muammolar",
+           "content1": "O‘zbekiston taʼlim tizimi bir qator jiddiy muammolarga duch kelmoqda. So‘nggi yillarda amalga oshirilgan islohotlarga qaramay, maktablar va oliy o‘quv   yurtlarida tajribali o‘qituvchilarning yetishmasligi, darsliklarning eskirganligi va texnik bazaning zaifligi muammo bo‘lib qolmoqda. Ayniqsa, qishloq hududlarida sifatli     taʼlimga bo‘lgan kirish imkoniyati cheklangan. O‘qituvchilarning ko‘pchiligi eski usullar bilan dars o‘tmoqda, darsliklar esa bugungi kun talablariga mos emas. Vaziyatni    o‘zgartirish uchun o‘qituvchilarni qayta tayyorlash, dars dasturlarini yangilash va infratuzilmani rivojlantirish zarur.",
+    
+           "title2": "Maktab va OTMlardagi hozirgi holat",
+           "content2": "So‘nggi yillarda davlat va xususiy sektor tomonidan taʼlim tizimini yaxshilash bo‘yicha muhim qadamlar qo‘yilmoqda. Elektron kundaliklar, onlayn o‘quv   platformalari va mustaqil o‘rganish imkoniyatlari kengaymoqda. OTMlar kredit-modul tizimiga o‘tmoqda, bu esa o‘quv jarayonini yanada moslashuvchan qiladi. Biroq    o‘qituvchilar yangi tizimga moslashishda qiynalmoqda. Ko‘plab ko‘ngilli loyihalar, xususiy kurslar va o‘quv markazlari taʼlimdagi bo‘shliqlarni to‘ldirishga harakat   qilmoqda. Ammo bu tashabbuslar davlat qo‘llovisiz cheklangan taʼsirga ega bo‘ladi.",
+    
+          "title3": "Taʼlim tizimi duch kelayotgan asosiy qiyinchiliklar",
+          "content3": "Asosiy muammolar qatoriga doimiy moliyaviy yetishmovchilik, eskirgan bino-inshootlar va o‘qituvchilar uchun malaka oshirish kurslarining yetishmasligi kiradi. Ayrim maktablar haddan tashqari to‘lib ketgan, bu esa taʼlim sifati pasayishiga olib kelmoqda. Dars dasturlarida nazariya ko‘p, amaliyotga esa yetarli e’tibor qaratilmayapti. O‘quvchilar uchun psixologik yordam tizimi deyarli mavjud emas, ayniqsa imtihon davrida. Ushbu muammolarni hal qilish uchun tizimli va strategik yondashuv talab etiladi."
+          },
+          
+          "educationTitle": "Taʼlim – Kelajak",
+          "educationNews": [
+            {
+              "title": "O'zbekistonda taʼlimning kelajagi",
+              "content": "2025-yil noyabr oyida Toshkentda taʼlim sohasidagi islohotlarga bagʻishlangan birinchi milliy konferensiya boʻlib oʻtdi. Tadbirda asosiy yoʻnalishlar muhokama qilindi: raqamli darsliklar va onlayn platformalarni joriy etish, o'qituvchilarni zamonaviy texnologiyalarga tayyorlash va xalqaro standartlarga mos taʼlim tizimini yaratish. Unda Taʼlim vazirligi, xususiy maktablar va xalqaro mutaxassislar ishtirok etdi."
+            },
+            {
+              "title": "Taʼlim tashabbuslarini qoʻllab-quvvatlash uchun yigʻimlar",
+              "content": "«EduFuture» va «Smart Schools Uzbekistan» kabi ijtimoiy guruhlar taʼlimni rivojlantirish maqsadida xayriya kampaniyalarini boshladi. Yigʻilgan mablagʻlar hisobiga qishloq maktablariga interaktiv doskalar, planshetlar va noutbuklar xarid qilindi. Shuningdek, olis hududlardagi o‘qituvchilar uchun malaka oshirish kurslari tashkil etildi."
+            },
+            {
+              "title": "Iqtidorli o‘quvchilarni qo‘llab-quvvatlash dasturlari",
+              "content": "Iqtidorlarni rivojlantirish bo‘yicha milliy tashabbus doirasida yangi dasturlar boshlandi. Toshkentda yuqori sinf o‘quvchilari o‘rtasida startap tanlovi o‘tkazildi, g‘oliblarga IT maktablarida o‘qish uchun grantlar berildi. Samarqand va Farg‘onada ustozlik dasturlari boshlab yuborilib, o‘quvchilar yetakchi xorijiy universitetlar o‘qituvchilaridan shaxsiy maslahat olish imkoniyatiga ega bo‘lishdi."
+            }
+          ],
+
+          "society": {
+            "title": "Taʼlim — Yechimlar",
+            "news1": {
+              "title": "Hududlarda yangi o‘quv markazlari ochilmoqda",
+              "content": "2024-yil taʼlim sifatini oshirish dasturi doirasida O‘zbekistonning barcha hududlarida yangi o‘quv markazlari ochilishi eʼlon qilindi. Dastlabki markazlar Toshkent, Samarqand va Farg‘onada ish boshladi. Ular matematika, tillar va IT yo‘nalishlari bo‘yicha darslar taklif qilmoqda."
+            },
+            "news2": {
+              "title": "Ko‘ngilli taʼlim loyihalari rivojlanmoqda",
+              "content": "Toshkentdagi 'Ilim' loyihasi bir yilda ikki barobar ko‘proq o‘quvchini qamrab oldi. Samarqanddagi 'Bilim — kuch' loyihasi esa 10 mln so‘mlik darslik va texnikani jamg‘ardi. Bularning barchasi ko‘ngillilar tashabbusi bilan amalga oshdi."
+            },
+            "news3": {
+              "title": "“Kelajak maktabini qur” dasturi",
+              "content": "2024-yil oxirida boshlangan tashabbus orqali fuqarolar yangi maktablar qurilishi va jihozlanishiga xayriya qilish imkoniga ega. Mablag‘lar sinflar, laboratoriyalar va qulay sharoitlar yaratishga sarflanadi."
+            }
+          },
+
+          "purchases": {
+            "title": "Sotib olinganlar",
+            "back": "Do'konga qaytish",
+            "points": "ochko",
+            "items": "Umumiy mahsulotlar",
+            "totalSpent": "Jami sarflangan",
+            "remove": "O'chirish",
+            "empty": "Siz hali hech narsa sotib olmadingiz.",
+            "sell": "Sotish",
+            "sold": "Mahsulot savdoga qo'yildi!",
+            "enterPrice": "Sotish narxini kiriting",
+            "confirmSell": "Tasdiqlash"
+          },
+
+          "shop_items": {
+            "id": "Mahsulot IDsi",
+            "categoryLabel": "Kategoriya",
+            "status": "Holat",
+            "statusAvailable": "Mavjud",
+            "statusBought": "Allaqachon xarid qilingan",
+            "estimatedDelivery": "Taxminiy yetkazib berish",
+            "days": "kun",
+
+            "shop": "Do'kon",
+            "notFound": "Mahsulot topilmadi",
+            "notFoundDescription": "Afsuski, bu ID raqamli mahsulot mavjud emas.",
+            "backToShop": "Do'konga qaytish",
+
+            "premium": "Premium",
+            "features": "Xususiyatlar",
+            "points": "ball",
+            "need": "Yana kerak",
+            "morePoints": "ball",
+            "buy": "Xarid qilish",
+            "back": "Orqaga",
+            "success": "Xarid muvaffaqiyatli amalga oshirildi!",
+            "fail": "Xarid qilish uchun ball yetarli emas.",
+            "confirmPurchase": "Xaridni tasdiqlang",
+            "confirmMessage": "{{name}} mahsulotini {{price}} ballga sotib olmoqchimisiz?",
+            "confirmBuy": "Tasdiqlash",
+            "cancel": "Bekor qilish",
+
+            "rainbow": {
+              "name": "Kamalak Mavzusi",
+              "description": "Profilingiz uchun yorqin va rang-barang mavzu.",
+              "feature1": "Kamalak animatsiyasi",
+              "feature2": "Qorong'i rejimni qo'llab-quvvatlash",
+              "feature3": "E'tiborni tortadi"
+            },
+            "kitty": {
+              "name": "Mushukcha Mavzusi",
+              "description": "Mushuklarni yaxshi ko'radiganlar uchun yoqimli mavzu.",
+              "feature1": "Miyovlaydigan tovush",
+              "feature2": "Mushukcha fon rasmi",
+              "feature3": "Animatsion ikonlar"
+            },
+            "luxary": {
+              "name": "Hashamatli Mavzu",
+              "description": "Oltin elementlarga ega nafis dizayn.",
+              "feature1": "Oltin palitra",
+              "feature2": "Premium interfeys"
+            },
+            "omg": {
+              "name": "'Voy!' Mavzusi",
+              "description": "Ko'tarinki kayfiyat uchun quvnoq mavzu.",
+              "feature1": "Portlash effektlari",
+              "feature2": "Ajablanarli tovushlar",
+              "feature3": "Yaltirab turadigan elementlar"
+            },
+            "kitty_2": {
+              "name": "Mushukcha Mavzusi PRO",
+              "description": "Mushuklarni chin dildan sevuvchilar uchun yangi versiya!",
+              "feature1": "3D Miyovlash",
+              "feature2": "Yangi animatsiyalar",
+              "feature3": "Maxsus yumshoqlik"
+            },
+            "luxary_2": {
+              "name": "Elita Mavzusi",
+              "description": "Yana ko'proq hashamat va porloqlik.",
+              "feature1": "Brilliant effekti",
+              "feature2": "Eksklyuziv ikonlar"
+            }
+          },
+
+          "subjects": {
+            "math": "Matematika",
+            "physics": "Fizika",
+            "biology": "Biologiya",
+            "chemistry": "Kimyo",
+            "history": "Tarix",
+            "literature": "Adabiyot"
+          },
+
+          "ai_usage": {
+            "title": "AI yordamchisidan o‘qish uchun qanday foydalanish kerak",
+            "note": "⚠️ Eslab qol: AI bu — vosita, lekin mustaqil ta’lim o‘rnini bosmaydi!",
+            "steps": [
+              {
+                "title": "1. AI yordamchisini oching",
+                "description": "Yordamchi sahifasiga o‘ting va kerakli bo‘limni tanlang: vazifalar, testlar, mavzular tushuntirishi va boshqalar."
+              },
+              {
+                "title": "2. Savolni aniq yozing",
+                "description": "Aniq va tushunarli savol yozing. Masalan: “Hosila nima?” yoki “Tenglamani yechishda yordam bering.”"
+              },
+              {
+                "title": "3. Javobni oling va o‘rganing",
+                "description": "AI sizga tushuntirish, yechim yoki bosqichma-bosqich ko‘rsatma beradi. Uni faqat o‘rganish uchun foydalaning, ko‘chirish uchun emas."
+              },
+              {
+                "title": "4. Bilimingizni sinab ko‘ring",
+                "description": "Javobni olgach — o‘zingizni sinang, mavzuni takrorlang, qo‘shimcha savollar bering."
+              },
+              {
+                "title": "5. AI'dan to‘g‘ri foydalaning",
+                "description": "AI — bu ta’lim yordamchisi. Uni ko‘chirish yoki aldayotgan kabi ishlatmang. U tushunishga yordam berish uchun yaratilgan."
+              },
+              {
+                "title": "6. AI'dan maksimal foyda olish uchun uni to‘g‘ri foydalaning",
+                "description": "AI'dan muntazam va halol foydalanish mavzuni chuqurroq tushunishga va tanqidiy fikrlashni rivojlantirishga yordam beradi."
+              }
+            ]
+          }
+                  
+}
+  

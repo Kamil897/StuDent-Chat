@@ -1,0 +1,294 @@
+// =============================
+// IELTS Simulation — Redesign
+// =============================
+
+$primary: #3b82f6;
+$primary-hover: #2563eb;
+$success: #16a34a;
+$warning: #ca8a04;
+$error: #dc2626;
+
+$radius: 12px;
+$transition: all 0.25s ease;
+
+// Light theme
+$light-bg: #f9fafb;
+$light-surface: #ffffff;
+$light-border: #e5e7eb;
+$light-text: #111827;
+$light-muted: #6b7280;
+
+// Dark theme
+$dark-bg: #0f172a;
+$dark-surface: #1e293b;
+$dark-border: #334155;
+$dark-text: #f9fafb;
+$dark-muted: #9ca3af;
+
+// -----------------
+// Container
+// -----------------
+.container {
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &.light {
+    background: $light-bg;
+    color: $light-text;
+  }
+
+  &.dark {
+    background: $dark-bg;
+    color: $dark-text;
+  }
+}
+
+// -----------------
+// Title
+// -----------------
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+
+  &.light {
+    color: $light-text;
+  }
+
+  &.dark {
+    color: $dark-text;
+  }
+}
+
+// -----------------
+// Switcher
+// -----------------
+.switcher {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+// -----------------
+// Buttons
+// -----------------
+.button {
+  padding: 10px 20px;
+  border-radius: $radius;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: $transition;
+
+  &.light {
+    background: $light-surface;
+    border-color: $light-border;
+    color: $light-muted;
+
+    &:hover {
+      color: $light-text;
+      border-color: $primary;
+    }
+  }
+
+  &.dark {
+    background: $dark-surface;
+    border-color: $dark-border;
+    color: $dark-muted;
+
+    &:hover {
+      color: $dark-text;
+      border-color: $primary;
+    }
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.buttonActive {
+  background: $primary !important;
+  color: #fff !important;
+  border: none !important;
+
+  &:hover {
+    background: $primary-hover !important;
+  }
+}
+
+// -----------------
+// Card Blocks
+// -----------------
+.card,
+.resultCard {
+  border-radius: $radius;
+  padding: 24px;
+  transition: $transition;
+
+  &.light {
+    background: $light-surface;
+    border: 1px solid $light-border;
+  }
+
+  &.dark {
+    background: $dark-surface;
+    border: 1px solid $dark-border;
+  }
+}
+
+.resultCard {
+  margin-top: 24px;
+}
+
+// -----------------
+// Inputs & Textarea
+// -----------------
+.textarea {
+  width: 100%;
+  min-height: 200px;
+  border-radius: $radius;
+  padding: 14px;
+  font-size: 15px;
+  resize: vertical;
+  transition: $transition;
+
+  &.light {
+    border: 1px solid $light-border;
+    background: $light-bg;
+    color: $light-text;
+
+    &:focus {
+      border-color: $primary;
+      outline: none;
+    }
+  }
+
+  &.dark {
+    border: 1px solid $dark-border;
+    background: $dark-bg;
+    color: $dark-text;
+
+    &:focus {
+      border-color: $primary;
+      outline: none;
+    }
+  }
+}
+
+.inputGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 12px;
+}
+
+.input {
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+  transition: $transition;
+
+  &.light {
+    border: 1px solid $light-border;
+    background: $light-surface;
+    color: $light-text;
+  }
+
+  &.dark {
+    border: 1px solid $dark-border;
+    background: $dark-surface;
+    color: $dark-text;
+  }
+
+  &:focus {
+    border-color: $primary;
+    outline: none;
+  }
+}
+
+// -----------------
+// Table
+// -----------------
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+  font-size: 14px;
+
+  th,
+  td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  &.light {
+    th {
+      color: $light-muted;
+      border-bottom: 1px solid $light-border;
+    }
+    td {
+      color: $light-text;
+      border-bottom: 1px solid $light-border;
+    }
+  }
+
+  &.dark {
+    th {
+      color: $dark-muted;
+      border-bottom: 1px solid $dark-border;
+    }
+    td {
+      color: $dark-text;
+      border-bottom: 1px solid $dark-border;
+    }
+  }
+}
+
+// -----------------
+// Feedback
+// -----------------
+.feedback {
+  padding: 14px;
+  border-radius: $radius;
+  font-size: 14px;
+  line-height: 1.5;
+
+  &.light {
+    background: #f3f4f6;
+    color: $light-muted;
+  }
+
+  &.dark {
+    background: #1e293b;
+    color: $dark-muted;
+  }
+}
+
+// -----------------
+// Scores
+// -----------------
+.scoreLow {
+  color: $error;
+  font-weight: 600;
+}
+.scoreMid {
+  color: $warning;
+  font-weight: 600;
+}
+.scoreHigh {
+  color: $success;
+  font-weight: 600;
+}

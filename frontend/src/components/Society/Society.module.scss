@@ -1,0 +1,121 @@
+.newsPage {
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.newsList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.newsItem {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+  padding: 24px;
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.newsTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #0a58ca;
+}
+
+.newsContent {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.like {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.podelis {
+  background-color: #0a58ca;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #084298;
+  }
+}
+
+.shareOptions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+
+  button {
+    width: 32px;
+    height: 32px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+
+  input {
+    flex-grow: 1;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  button {
+    background-color: #198754;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+
+    &:hover {
+      background-color: #157347;
+    }
+  }
+}

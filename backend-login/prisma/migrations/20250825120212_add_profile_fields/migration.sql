@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE `user` ADD COLUMN `education` VARCHAR(191) NULL,
+    ADD COLUMN `firstName` VARCHAR(191) NULL,
+    ADD COLUMN `hobby` VARCHAR(191) NULL,
+    ADD COLUMN `lastName` VARCHAR(191) NULL;

@@ -1,0 +1,17 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstName": "Asilbek",
+            "lastName": "Abdugafforov",
+            "email": "asilbekabdugafforov7@gmail.com",
+            "hobby": "it",
+            "education": "ish",
+            "username": "ali",
+            "password": "ali_123",
+            "avatar": "",
+            "birth": "2007-10-01",
+            "age": 17
+        }
+    ]
+}

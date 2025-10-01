@@ -1,0 +1,250 @@
+$main-color: #2c3e50;
+$accent-color: #3498db;
+$light-color: #ecf0f1;
+$text-color: #ecf0f1;
+$danger-color: #e74c3c;
+$success-color: #2ecc71;
+
+.container {
+  padding: 2rem;
+  background-color: $main-color;
+  color: $text-color;
+  min-height: 100vh;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  background-color: lighten($main-color, 5%);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+
+  &.premium {
+    border: 2px solid gold;
+  }
+
+  &.loading {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.imageSection {
+  width: 100%;
+  text-align: center;
+  background-color: darken($main-color, 10%);
+}
+
+.imageContainer {
+  position: relative;
+  padding: 1rem;
+
+  .image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+
+    &.loaded {
+      opacity: 1;
+    }
+  }
+
+  .premiumBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: gold;
+    color: black;
+    padding: 0.4rem 0.7rem;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+}
+
+.detailsSection {
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.features {
+  margin-bottom: 1.5rem;
+
+  .featuresTitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .featuresList {
+    list-style: none;
+    padding: 0;
+
+    .featureItem {
+      margin: 0.25rem 0;
+      display: flex;
+      align-items: center;
+
+      .featureIcon {
+        color: $success-color;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.priceSection {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+
+  .insufficientFunds {
+    color: $danger-color;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 0.5rem;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .buyButton {
+    background-color: $accent-color;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &.cantAfford {
+      background-color: darken($accent-color, 20%);
+    }
+  }
+
+  .disabledButton {
+    background-color: $success-color;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .backButton {
+    background-color: transparent;
+    color: $text-color;
+    border: 1px solid $text-color;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+
+    .backIcon {
+      margin-right: 0.3rem;
+    }
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 62, 80, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  .modal {
+    background-color: $light-color;
+    color: #333;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+
+    .modalTitle {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .modalText {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .modalActions {
+      display: flex;
+      justify-content: space-between;
+
+      .confirmButton {
+        background-color: $success-color;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+      }
+
+      .cancelButton {
+        background-color: $danger-color;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: $text-color;
+
+  .breadcrumbLink {
+    color: $accent-color;
+    text-decoration: none;
+  }
+
+  .breadcrumbSeparator {
+    margin: 0 0.25rem;
+  }
+
+  .breadcrumbCurrent {
+    font-weight: bold;
+  }
+}
+
+.statsBox {
+  background-color: lighten($main-color, 10%);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+}
+
+.divider {
+  margin: 1.5rem 0;
+  border: none;
+  border-top: 1px solid lighten($main-color, 20%);
+}
+
+.spinner {
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,55 @@
+.aichat-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 12px;
+    color: white;
+  }
+  
+  .aichat-messages {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  .aichat-message {
+    padding: 8px 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+  }
+  
+  .aichat-message.user {
+    background-color: #3a3a3a;
+    text-align: right;
+  }
+  
+  .aichat-message.assistant {
+    background-color: #2e2e6e;
+    text-align: left;
+  }
+  
+  .aichat-input {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .aichat-input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #2a2a2a;
+    color: white;
+  }
+  
+  .aichat-input button {
+    padding: 10px 20px;
+    background: #4e8cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  

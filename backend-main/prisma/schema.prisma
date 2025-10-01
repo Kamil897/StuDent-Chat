@@ -1,0 +1,253 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum ReportStatus {
+  pending
+  in_review
+  resolved
+  rejected
+}
+
+enum ReportPriority {
+  low
+  normal
+  high
+  critical
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  email         String   @unique
+  password      String
+  name          String
+  role          String   @default("user") // user | admin | creator | superadmin
+  status        String   @default("active")
+  avatar        String?  @db.LongText
+  avatarBorders String?  @db.Text
+  firstName     String?
+  lastName      String?
+  hobby         String?
+  education     String?
+  karmaPoints   Int      @default(0)       // 👈 геймификация
+  coins         Int      @default(0)       // 💰 монеты
+  crystals      Int      @default(0)       // 💎 кристаллы
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt @default(now())
+
+  cogniya        CogniyaProfile?
+  chatHistories  ChatHistory[]
+  // связи для Report
+  reportsFiled   Report[] @relation("ReportsByReporter")
+  reportsAgainst Report[] @relation("ReportsByTarget")
+  assignedReports Report[] @relation("AssignedAdmin")
+  notifications  Notification[]
+  adminKPI       AdminKPI?
+  gameProgress   GameProgress[]
+  leaderboards   Leaderboard[]
+  userTitles     UserTitle[]
+  purchases      PurchaseHistory[]
+  achievements   UserAchievement[]
+  friends        Friend[] @relation("UserFriends")
+  friendsOf      Friend[] @relation("FriendOfUsers")
+  sentMessages   Message[] @relation("SentMessages")
+  receivedMessages Message[] @relation("ReceivedMessages")
+  walletTransactions WalletTransaction[]
+}
+
+
+model CogniyaProfile {
+  id        Int      @id @default(autoincrement())
+  userId    Int       @unique   // 👈 добавить уникальность  
+  hobbies   String?
+  interests String?
+  bio       String?
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model ChatHistory {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  question  String   @db.Text
+  answer    String   @db.Text
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model ServerStatus {
+  id        Int      @id @default(autoincrement())
+  uptime    Int      @default(0)
+  onlineUsers Int    @default(0)
+  message   String?
+  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now())
+}
+
+model Report {
+  id              Int            @id @default(autoincrement())
+  reporterId      Int
+  targetId        Int?
+  reason          String         @db.Text
+  status          ReportStatus   @default(pending)
+  priority        ReportPriority @default(normal)
+  toxicityScore   Float          @default(0)
+  autoFlagged     Boolean        @default(false)
+  assignedAdminId Int?
+  firstResponseAt DateTime?
+  resolvedAt      DateTime?
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @default(now()) @updatedAt
+
+  reporter User   @relation("ReportsByReporter", fields: [reporterId], references: [id])
+  target   User?  @relation("ReportsByTarget",   fields: [targetId],   references: [id])
+  admin    User?  @relation("AssignedAdmin",     fields: [assignedAdminId], references: [id])
+}
+
+model Notification {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  type      String   // e.g. "report.status", "system.update"
+  title     String
+  body      String?
+  readAt    DateTime?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model AdminKPI {
+  id                  Int      @id @default(autoincrement())
+  adminId             Int      @unique
+  handledCount        Int      @default(0)
+  avgFirstResponseSec Int      @default(0)
+  rating              Float    @default(0)
+  updatedAt           DateTime @updatedAt
+  createdAt           DateTime @default(now())
+
+  admin User @relation(fields: [adminId], references: [id])
+}
+
+model GameProgress {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  gameName  String   // asteroids, snake, pingpong, tictactoe, mathbattle, tir, knowledgemaze, don
+  score     Int      @default(0)
+  level     Int      @default(1)
+  timeSpent Int      @default(0) // в секундах
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([userId, gameName])
+}
+
+model Leaderboard {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  gameName  String
+  score     Int
+  rank      Int?
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([userId, gameName])
+}
+
+model UserTitle {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  titleName String   // "Snake Master", "Math Genius", "Asteroid Hunter", etc.
+  earnedAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([userId, titleName])
+}
+
+model PurchaseHistory {
+  id          Int      @id @default(autoincrement())
+  userId      Int
+  productName String
+  amount      Float
+  currency    String   @default("points") // points, money
+  quantity    Int      @default(1)
+  totalCost   Float
+  purchaseAt  DateTime @default(now())
+  source      String   @default("shop") // shop, points_shop, donation
+
+  user User @relation(fields: [userId], references: [id])
+}
+
+model Achievement {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  description String   @db.Text
+  icon        String   // URL или эмодзи
+  condition   String   @db.Text // JSON условие для получения
+  points      Int      @default(0) // очки за достижение
+  createdAt   DateTime @default(now())
+
+  userAchievements UserAchievement[]
+}
+
+model UserAchievement {
+  id            Int         @id @default(autoincrement())
+  userId        Int
+  achievementId Int
+  earnedAt      DateTime    @default(now())
+
+  user        User        @relation(fields: [userId], references: [id])
+  achievement Achievement @relation(fields: [achievementId], references: [id])
+
+  @@unique([userId, achievementId])
+}
+
+model Friend {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  friendId  Int
+  status    String   @default("pending") // pending, accepted, blocked
+  createdAt DateTime @default(now())
+
+  user   User @relation("UserFriends", fields: [userId], references: [id])
+  friend User @relation("FriendOfUsers", fields: [friendId], references: [id])
+
+  @@unique([userId, friendId])
+}
+
+model Message {
+  id        Int      @id @default(autoincrement())
+  fromUserId Int
+  toUserId   Int
+  content    String  @db.Text
+  read       Boolean @default(false)
+  createdAt  DateTime @default(now())
+
+  fromUser User @relation("SentMessages", fields: [fromUserId], references: [id])
+  toUser   User @relation("ReceivedMessages", fields: [toUserId], references: [id])
+}
+
+model WalletTransaction {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  type      String   // deposit, withdraw, transfer, reward
+  amount    Int
+  currency  String   @default("coins") // coins, crystals, points
+  source    String?  // game, shop, achievement, etc.
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id])
+}
+

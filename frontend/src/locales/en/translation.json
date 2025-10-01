@@ -1,0 +1,719 @@
+{
+    "menu": {
+      "group": "Group",
+      "news": "Instruction for using AI",
+      "login": "login",
+      "register": "Register"
+    },
+    "help": "Help center – for whom?",
+    "text_cursor": "students!",
+    "actions_section_title": "How you can help",
+
+    "about": {
+      "title": "About us",
+      "description": "We created this platform for those who strive for knowledge, confidence, and new achievements. Here, you will find everything you need for studying, communication, and support on the way to entering colleges, universities, and other educational institutions. Our project is a place where dreams turn into plans, and plans turn into reality!"
+    },
+
+    "actions": {
+      "mentor": {
+        "title": "Become a Mentor",
+        "content": "Share your knowledge and experience by helping others develop useful skills. Join educational programs in your region and contribute to building a stronger learning community."
+      },
+      "support": {
+        "title": "Share with others",
+        "content": "Tell your friends and network about our initiatives, take part in events, and help spread the idea of quality education throughout society."
+      },
+      "learn": {
+        "title": "Start Learning",
+        "content": "Choose engaging courses and workshops to expand your knowledge and discover new directions. Learning is simple and inspiring!"
+      }
+    },
+
+    "how_we_help": {
+      "title": "How WE can help",
+      "sections": {
+        "community": {
+          "title": "Communication and mutual support",
+          "content": "We are not just an information platform — we are a place where everyone can share experiences and be inspired by others’ stories."
+        },
+        "flexibility": {
+          "title": "Flexibility in learning",
+          "content": "You choose how to learn: join online classes, take tests, or watch lesson recordings."
+        },
+        "skills": {
+          "title": "Skill development",
+          "content": "Beyond admissions, we help develop essential skills for study and life: teamwork, public speaking, problem solving, and time management."
+        }
+      }
+    },
+
+    "why_us": {
+      "title": "Why choose us?",
+      "reasons": {
+        "availability": {
+          "title": "Available 24/7",
+          "content": "We’re always here for you! Ask questions, get support, and find answers whenever it’s convenient for you."
+        },
+        "mentors": {
+          "title": "Top mentors",
+          "content": "Experienced specialists will help you understand complex topics, create study plans, and even prepare for important exams."
+        },
+        "safe_space": {
+          "title": "Safe and friendly space",
+          "content": "We ensure that communication on the platform is welcoming and respectful. Be yourself, share ideas and opinions without fear of judgment."
+        }
+      }
+    },
+
+    "news_menu": {
+      "all": "All News",
+      "problems": "Problems",
+      "solution": "Solution",
+      "future": "Future"
+    },
+
+    "footer": {
+      "groups": "Groups",
+      "news": "Intructions for using AI",
+      "institutions": "Institutions",
+      "account": "My Account",
+      "slogan": "Learn. Communicate. Grow."
+    },
+
+    "chat": {
+      "select_chat": "Select a chat:",
+      "chat_id": "Chat ID",
+      "choose_prompt": "Choose a chat",
+      "chat": "Chat",
+      "add_chat": "Add chat",
+      "back_to_chats": "Back to chats",
+      "write_message": "Write a message...",
+      "send": "Send"
+    },
+
+    "ai_chat": {
+      "chats": "Chats",
+      "new_chat": "New Chat",
+      "chat": "Chat",
+      "settings": "Settings",
+      "welcome": "Welcome to Cognia!",
+      "start_prompt": "Start by typing your question below.",
+      "input_placeholder": "Type your message...",
+      "thinking": "Thinking",
+      "no_reply": "No reply from AI",
+      "connection_error": "Connection error. Please try again.",
+  
+      "settings_title": "AI Settings",
+      "theme": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "reply_style": "Answer Style",
+      "style_normal": "Normal",
+      "style_detailed": "Detailed",
+      "style_creative": "Creative",
+      "clear_history": "Clear Chat History",
+      "close": "Close"
+    },
+
+    "main": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "hobby": "Hobby",
+      "education": "Education/Job",
+      "loading": "Loading..."
+    },
+
+    "dock": {
+      "home": "Home",
+      "edit": "Edit",
+      "shop": "Shop",
+      "games": "Games",
+      "logout": "Logout",
+      "privilege": "PRIVILEGE",
+      "title": "TITLE",
+      "admin": "Admin",
+      "moderator": "Moderator",
+      "user": "User",
+      "newbie": "Newbie",
+      "experienced": "Experienced",
+      "veteran": "Veteran"
+    },
+
+    "login": {
+      "title": "Login",
+      "username": "Username",
+      "password": "Password",
+      "username_placeholder": "Enter your username",
+      "password_placeholder": "Enter your password",
+      "login_button": "Log In",
+      "no_account": "Don't have an account?",
+      "register_link": "Register",
+      "user_not_found": "User not found",
+      "incorrect_password": "Incorrect password",
+      "success": "Login successful!"
+    },
+
+    "register": {
+      "avatar": "Avatar",
+      "first_name": "First Name",
+      "enter_first_name": "Enter first name",
+      "last_name": "Last Name",
+      "enter_last_name": "Enter last name",
+      "email": "Email",
+      "enter_email": "Enter email",
+      "hobby": "Hobby",
+      "enter_hobby": "Enter your hobby",
+      "education": "Education / Work",
+      "enter_education": "Enter education or workplace",
+      "birth": "Date of Birth (optional)",
+      "username": "Username",
+      "enter_username": "username",
+      "password": "Password",
+      "enter_password": "Enter password",
+      "register_button": "Register",
+      "have_account": "Already have an account?",
+      "login_link": "Log in",
+      "already_exists": "User with this username already exists",
+      "success": "Registration successful!"
+    },
+
+    "shop": {
+      "title": "Privilege Shop",
+      "available": "Available: {{count}} out of {{total}} items",
+      "balance": "Balance",
+      "spent": "Spent",
+      "bought": "Purchased ({{count}})",
+      "searchPlaceholder": "Search for items...",
+      "filter": "Filter:",
+      "all": "All ({{count}})",
+      "affordable": "Affordable ({{count}})",
+      "unaffordable": "Unaffordable ({{count}})",
+      "purchased": "Purchased ({{count}})",
+      "sort": "Sort by:",
+      "sortName": "By name",
+      "sortLow": "Cheapest first",
+      "sortHigh": "Most expensive first",
+      "sortRarity": "By rarity",
+      "legendary": "✨ Legendary",
+      "rare": "💎 Rare",
+      "purchasedLabel": "Purchased",
+      "empty": "No items found",
+      "emptySearch": "No results for \"{{query}}\"",
+      "emptyCategory": "No items in this category yet",
+      "clearSearch": "Clear search",
+      "success": "successfully purchased!",
+      "insufficientFunds": "❌ Not enough points!",
+      "statsTitle": "Purchase Statistics",
+      "statsPurchased": "Items Purchased",
+      "statsSpent": "Points Spent",
+      "statsCollection": "Collection",
+      "buypoints":"Buy points"
+    },
+
+    "bought": {
+      "title": "My Purchases",
+      "points": "points",
+      "back": "Back",
+      "remove": "Remove",
+      "empty": "You haven't purchased anything yet."
+    },
+
+  "shop_2": {
+    "buy": "Buy",
+    "purchasedLabel": "Purchased",
+    "details": "More details"
+  },
+  
+  "products": {
+    "rainbow": {
+      "name": "Rainbow",
+      "description": "Bright colors, positivity, and freedom!"
+    },
+    "luxary": {
+      "name": "Simple but Rich",
+      "description": "Simplicity and elegance."
+    },
+    "omg": {
+      "name": "OMG",
+      "description": "Wow effect guaranteed!"
+    },
+    "kitty": {
+      "name": "Kitties",
+      "description": "Purr-purr! With this privilege you get a fluffy dose of coziness."
+    }
+  },
+
+  "product": {
+    "notFound": "Product not found",
+    "success": "Purchase successful!",
+    "fail": "Not enough points!",
+    "bought": "Purchased",
+    "buy": "Buy",
+    "notEnough": "Insufficient points",
+    "back": "Back",
+    "points": "points"
+  },
+
+    "games.back": "Back",
+    "games.progress": "Progress:",
+    "games.noGamesFound": "No games found",
+    "games.playNow": "Play Now",
+    "games.congratsTitle": "Congratulations! 🎉",
+    "games.congratsText": "You have reached the maximum progress!",
+    "games.close": "Close",
+  
+    "games.categories.all": "All",
+    "games.categories.classic": "Classic",
+    "games.categories.board": "Board",
+    "games.categories.action": "Action",
+    "games.categories.educational": "Educational",
+    "games.categories.arcade": "Arcade",
+    "games.categories.sports": "Sports",
+    "games.categories.myTituls": "My Tituls",
+    "games.list": [
+      {
+        "id": 2,
+        "name": "Snake",
+        "description": "The classic Snake game...",
+        "link": "/Snake",
+        "image": "/snake.png",
+        "category": "Classic"
+      },
+      {
+        "id": 3,
+        "name": "Tic Tac Toe",
+        "description": "Play with friends and win...",
+        "link": "/TicTacToe",
+        "image": "/tictactoe.png",
+        "category": "Board"
+      },
+      {
+        "id": 4,
+        "name": "Shooting Range",
+        "description": "Test your aim...",
+        "link": "/Tir",
+        "image": "https://storage.needpix.com/rsynced_images/archery-152912_1280.png",
+        "category": "Action"
+      },
+      {
+        "id": 5,
+        "name": "Knowledge Maze",
+        "description": "Navigate through a maze...",
+        "link": "/KnowledgeMaze",
+        "image": "/maze.png",
+        "category": "Educational"
+      },
+      {
+        "id": 6,
+        "name": "Math Battle",
+        "description": "Solve math problems quickly...",
+        "link": "/MathBattle",
+        "image": "/math.png",
+        "category": "Educational"
+      },
+      {
+        "id": 7,
+        "name": "Rock Paper Scissors",
+        "description": "A classic game of chance...",
+        "link": "/don",
+        "image": "/don.png",
+        "category": "Classic"
+      },
+      {
+        "id": 8,
+        "name": "Space Invaders",
+        "description": "Defend Earth from aliens...",
+        "link": "/inviders",
+        "image": "/space.png",
+        "category": "Arcade"
+      },
+      {
+        "id": 9,
+        "name": "Ping Pong",
+        "description": "Test your reflexes...",
+        "link": "/pingpong",
+        "image": "/ping.png",
+        "category": "Sports"
+      },
+      {
+        "id": 10,
+        "name": "Meteors",
+        "description": "Avoid meteors and survive...",
+        "link": "/meteors",
+        "image": "/meteor.png",
+        "category": "Action"
+      },
+      {
+        "id": 11,
+        "name": "Titles",
+        "description": "Your achievements and awards",
+        "link": "/MyTituls",
+        "image": "/titules.png",
+        "category": "My tituls"
+      }
+    ],
+
+    "titles": {
+      "back": "Back",
+      "yourTitles": "Your Titles",
+      "congrats": "Congratulations! You've earned the title",
+      "locked": "title is locked 🔒",
+      "snake": {
+        "title": "Snake Master 🐍",
+        "requirement": "Score 20 in Snake"
+      },
+      "rps": {
+        "title": "RPS Champion ✊✋✌️",
+        "requirement": "Win 30 times in Rock-Paper-Scissors"
+      },
+      "flappy": {
+        "title": "Level 100 Flyer 🐤",
+        "requirement": "Score 100 in Flappy Bird"
+      }
+    },
+    
+    "snake": {
+      "title": "Snake",
+      "play": "Play",
+      "settings": "Settings",
+      "exit": "Exit",
+      "gameOver": "Game Over",
+      "playAgain": "Play Again",
+      "score": "Score",
+      "bestScore": "Best Score",
+      "timeLeft": "Time Left",
+      "menu": "Menu",
+      "instructions": {
+        "mobile": "Mobile: Use on-screen arrows or swipe",
+        "desktop": "Desktop: Use arrow keys or WASD to control"
+      }
+    },
+
+    "rps": {
+      "title": "Rock, Paper, Scissors",
+      "wins": "Wins",
+      "ties": "Ties",
+      "losses": "Losses",
+      "yourChoice": "Your Choice",
+      "computerChoice": "Computer's Choice",
+      "result": {
+        "win": "You Win!",
+        "tie": "It's a Tie!",
+        "lose": "Computer Wins!"
+      },
+      "chooseAgain": "Choose one more time",
+      "back": "Back"
+    },
+
+    "tictactoe": {
+      "chooseSymbol": "Who will you choose?",
+      "or": "Or",
+      "turn": {
+        "playerX": "Player's turn",
+        "playerO": "Player's turn",
+        "computer": "Computer's turn"
+      },
+      "result": {
+        "win": "Congratulations, you won!",
+        "lose": "You lost",
+        "draw": "It's a draw"
+      },
+      "playAgain": "Play again",
+      "changeSymbol": "Change symbol",
+      "exit": "Exit to game menu",
+      "reset": "Restart"
+    },
+
+    "tir.title": "Shooting Game",
+    "tir.play": "Play",
+    "tir.settings": "Settings",
+    "tir.settings_alert": "Settings will be available soon!",
+    "tir.exit": "Exit",
+    "tir.score": "Score",
+    "tir.time": "Time",
+    "tir.game_over": "Game Over",
+    "tir.back": "Back",
+
+      "knowledge_maze": {
+        "back": "Back",
+        "choose_category": "Choose a category",
+        "play_again": "Play again",
+        "game_over": "Game over!",
+        "score": "Your score: {{score}}/{{total}}",
+        "attempts": "Attempts: {{count}}",
+        "categories": {
+          "География": "Geography",
+          "Наука": "Science",
+          "История": "History"
+        },
+        "questions": {
+          "География": [
+            { "q": "What is the capital of France?", "options": ["Berlin", "Madrid", "Paris", "Rome"], "answer": "Paris" },
+            { "q": "What is the highest mountain in the world?", "options": ["Kilimanjaro", "Elbrus", "Everest", "McKinley"], "answer": "Everest" },
+            { "q": "What is the capital of Japan?", "options": ["Tokyo", "Seoul", "Beijing", "Bangkok"], "answer": "Tokyo" },
+            { "q": "How many oceans are on Earth?", "options": ["4", "3", "7", "5"], "answer": "5" },
+            { "q": "What is the longest river in the world?", "options": ["Amazon", "Nile", "Yangtze", "Mississippi"], "answer": "Nile" },
+            { "q": "Which continent is the coldest?", "options": ["Asia", "Antarctica", "Europe", "North America"], "answer": "Antarctica" },
+            { "q": "In which country is the Great Wall located?", "options": ["China", "Japan", "India", "Mongolia"], "answer": "China" },
+            { "q": "Which ocean is the largest?", "options": ["Atlantic", "Indian", "Arctic", "Pacific"], "answer": "Pacific" }
+          ],
+          "Наука": [
+            { "q": "Which element is represented by 'O' on the periodic table?", "options": ["Oxygen", "Gold", "Tin", "Osmium"], "answer": "Oxygen" },
+            { "q": "What gas do people mostly inhale?", "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"], "answer": "Nitrogen" },
+            { "q": "Which organ filters blood?", "options": ["Kidneys", "Liver", "Lungs", "Heart"], "answer": "Kidneys" },
+            { "q": "How many planets are in the Solar System?", "options": ["7", "9", "8", "11"], "answer": "8" },
+            { "q": "Who discovered the law of gravity?", "options": ["Einstein", "Newton", "Galileo", "Copernicus"], "answer": "Newton" },
+            { "q": "Which is the simplest chemical reaction?", "options": ["Oxidation", "Combustion", "Photosynthesis", "Evaporation"], "answer": "Evaporation" },
+            { "q": "Which body part contains the most bones?", "options": ["Hand", "Foot", "Spine", "Head"], "answer": "Foot" },
+            { "q": "Which planet is the hottest?", "options": ["Mars", "Jupiter", "Venus", "Mercury"], "answer": "Venus" }
+          ],
+          "История": [
+            { "q": "Who wrote 'War and Peace'?", "options": ["Dostoevsky", "Tolstoy", "Pushkin", "Chekhov"], "answer": "Tolstoy" },
+            { "q": "What year did World War II begin?", "options": ["1914", "1939", "1941", "1945"], "answer": "1939" },
+            { "q": "When was the French Revolution?", "options": ["1789", "1812", "1848", "1917"], "answer": "1789" },
+            { "q": "Who was the first President of the USA?", "options": ["Jefferson", "Washington", "Lincoln", "Roosevelt"], "answer": "Washington" },
+            { "q": "Which country invented gunpowder?", "options": ["China", "Greece", "Rome", "France"], "answer": "China" },
+            { "q": "In what year did the USSR collapse?", "options": ["1985", "1991", "2000", "1975"], "answer": "1991" },
+            { "q": "Who founded the Mongol Empire?", "options": ["Genghis Khan", "Attila", "Tamerlane", "Kublai Khan"], "answer": "Genghis Khan" },
+            { "q": "What was the name of the first space dog?", "options": ["Belka", "Strelka", "Laika", "Mukhtar"], "answer": "Laika" }
+          ]
+        }
+      },
+
+
+      "math_battle.title": "Math Battle",
+      "math_battle.subtitle": "Solve the problem as quickly as you can!",
+      "math_battle.your_health": "Your Health: {{player}} | Bot's Health: {{bot}}",
+      "math_battle.attack": "Attack",
+      "math_battle.you_won": "You won!",
+      "math_battle.you_lost": "You lost!",
+      "math_battle.back": "Back",
+      "math_battle.choose_difficulty": "Choose a difficulty level",
+      "math_battle.grade_5": "5th Grade",
+      "math_battle.grade_8": "8th Grade",
+      "math_battle.grade_11": "11th Grade",
+      "math_battle.hit": "Hit! You dealt {{damage}} damage.",
+      "math_battle.miss": "Missed! The bot hits you for {{damage}} damage.",
+
+      "space": {
+        "win": "You Win! 🎉",
+        "lose": "Game Over 💀",
+        "back": "← Back",
+        "restart": "Restart"
+      },
+
+      "doom.title": "Meteors",
+      "doom.start": "Start New Game",
+      "doom.exit": "Exit",
+      "doom.settings": "Settings",
+      "doom.asteroids": "Asteroids",
+      "doom.ship_color": "Ship Color",
+      "doom.asteroid_color": "Asteroid Color",
+      "doom.restart": "Restart Game",
+      "doom.score": "Score",
+      "doom.game_over": "Game Over",
+      "doom.win": "You Win!",
+
+      "editTitle": "Edit Profile",
+      "saveChanges": "Save Changes",
+      "labels": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "hobby": "Hobby",
+        "education": "Education/Work",
+        "avatarBorders": "Avatar Border Style"
+      },
+      "avatarBorderOptions": {
+        "none": "No Border",
+        "rounded": "Rounded",
+        "circle": "Circle",
+        "bordered": "With Border"
+      },
+      "alertSaved": "Changes saved!",
+
+      "news": {
+        "search": "Search news...",
+        "searchResults": "Search results",
+        "project": "Project News",
+        "other": "Other News",
+        "society": "Society",        
+        "tech": "Technology",
+        "culture": "Culture",
+        "notFound": "No results found",
+        "tryAnother": "Try changing your search query",
+    
+        "societyText": "News related to society: events, social initiatives, interviews, and much more.",
+        "techText1": "On July 5, our team visited the Open Day at ITPU. The event was top-notch — very interesting and useful. They discussed problems faced by university graduates, where to gain first work experience, and possible solutions.",
+        "techText2": "On June 14, our team attended the powerful event Fu**up Talks at School 21. The speakers shared what to do and what not to do in a startup. It was honest, useful and inspiring.",
+        "cultureText": "On May 17, the first large-scale Agile conference in Uzbekistan took place in Tashkent — Agile Scale & Innovation 2025. Our startup took part in it. Great insights, networking and motivation!"
+      },
+
+      "edu": {
+        "heading": "Education — Challenges and Perspectives",
+        "title1": "Problems of the Education System in Uzbekistan",
+        "content1": "The education system in Uzbekistan is facing a number of serious challenges. Despite ongoing reforms, schools and universities still suffer from a shortage of qualified staff, outdated teaching materials, and a lack of modern technology. The situation is especially difficult in rural and remote areas where access to quality education is limited. Many teachers continue using outdated methods, and textbooks do not meet current standards. Improving the situation requires a comprehensive strategy including investment in teacher training, curriculum updates, and infrastructure development.",
+    
+        "title2": "Current Situation in Schools and Universities",
+        "content2": "In recent years, both the government and private initiatives have made visible efforts to improve education. Digital tools such as electronic gradebooks and online learning platforms are being implemented in schools. Universities are switching to credit-module systems, giving students more flexibility. However, teachers often struggle to adapt to these new systems. Volunteer projects, private courses, and learning centers are growing and help fill the gaps in knowledge. Still, these efforts need broader governmental support to achieve sustainable impact.",
+    
+        "title3": "Main Difficulties the Education System Faces",
+        "content3": "Key problems include chronic underfunding, outdated facilities, and lack of ongoing training for teachers. Educational institutions are often overcrowded, especially in urban areas, leading to lower teaching quality. Additionally, many academic programs focus heavily on theory and do not provide students with practical skills for the labor market. Psychological support for students is also lacking, especially during high-pressure periods like exams. A strategic, systemic approach is necessary to overcome these challenges and ensure better learning outcomes."
+      },
+
+      "educationTitle": "Education – The Future",
+      "educationNews": [
+        {
+          "title": "The Future of Education in Uzbekistan",
+          "content": "In November 2025, the first national conference dedicated to educational reforms was held in Tashkent. The event covered key modernization areas: the introduction of digital textbooks and online platforms, teacher training in new technologies, and the development of standards aligned with global education systems. Representatives from the Ministry of Education, private schools, and international experts emphasized the importance of a comprehensive reform strategy."
+        },
+        {
+          "title": "Fundraising for Educational Initiatives",
+          "content": "Groups of education enthusiasts such as 'EduFuture' and 'Smart Schools Uzbekistan' launched social media fundraising campaigns. Hundreds of citizens participated, raising funds for interactive boards, tablets, and laptops for rural schools. Additionally, training seminars were conducted for teachers working in remote regions, enhancing the quality of instruction."
+        },
+        {
+          "title": "Programs Supporting Gifted Students",
+          "content": "New initiatives were launched under the national talent development program to support gifted students. A student startup competition was held in Tashkent, with winners receiving scholarships to attend IT schools. Mentorship programs began in Samarkand and Fergana, offering students personalized guidance from professors at leading international universities."
+        }
+      ],
+
+      "society": {
+        "title": "Education — Solutions",
+        "news1": {
+          "title": "New Educational Centers Open in Regions",
+          "content": "As part of the 2024 program to improve the quality of education, the government announced the opening of new educational centers in every region of Uzbekistan. The first centers have already launched in Tashkent, Samarkand, and the Fergana region. These institutions offer extra classes in math, languages, and IT fields."
+        },
+        "news2": {
+          "title": "Volunteer Education Projects Are Expanding",
+          "content": "The 'Ilim' project in Tashkent has doubled its student reach in just one year. The 'Knowledge is Power' project in Samarkand has collected over 10 million soums worth of educational materials and equipment. All of this was achieved through volunteer initiatives and public support."
+        },
+        "news3": {
+          "title": "Build a School for the Future Program",
+          "content": "Launched at the end of 2024, the 'Build a School for the Future' initiative allows citizens of Uzbekistan to contribute to the construction and equipping of new schools. Donations go toward building classrooms, purchasing lab equipment, and creating comfortable learning environments."
+        }
+      },
+
+      "purchases": {
+        "title": "Bought Items",
+        "back": "Back to Shop",
+        "points": "points",
+        "items": "Total items",
+        "totalSpent": "Total spent",
+        "remove": "Remove",
+        "empty": "You haven’t bought anything yet.",
+        "sell": "Sell",
+        "sold": "Item listed for sale!",
+        "enterPrice": "Enter sell price",
+        "confirmSell": "Confirm Sell"
+      },
+
+      "shop_items": {
+        "id": "Product ID",
+        "categoryLabel": "Category",
+        "status": "Status",
+        "statusAvailable": "Available",
+        "statusBought": "Already Purchased",
+        "estimatedDelivery": "Estimated Delivery",
+        "days": "days",
+
+        "shop": "Shop",
+        "notFound": "Product Not Found",
+        "notFoundDescription": "Unfortunately, a product with this ID does not exist.",
+        "backToShop": "Back to Shop",
+
+        "premium": "Premium",
+        "features": "Features",
+        "points": "points",
+        "need": "Need",
+        "morePoints": "more points",
+        "buy": "Buy",
+        "back": "Back",
+        "success": "Purchase successful!",
+        "fail": "Not enough points to make the purchase.",
+        "confirmPurchase": "Confirm Purchase",
+        "confirmMessage": "Are you sure you want to buy {{name}} for {{price}} points?",
+        "confirmBuy": "Confirm",
+        "cancel": "Cancel",
+
+        "rainbow": {
+          "name": "Rainbow Theme",
+          "description": "A bright and colorful theme for your profile.",
+          "feature1": "Rainbow animation",
+          "feature2": "Dark mode support",
+          "feature3": "Eye-catching"
+        },
+        "kitty": {
+          "name": "Cat Theme",
+          "description": "A cute cat-themed style for fluff lovers.",
+          "feature1": "Meowing sound",
+          "feature2": "Kitten wallpapers",
+          "feature3": "Animated icons"
+        },
+        "luxary": {
+          "name": "Luxury Theme",
+          "description": "Elegant design with golden elements.",
+          "feature1": "Gold color palette",
+          "feature2": "Premium interface"
+        },
+        "omg": {
+          "name": "OMG Theme",
+          "description": "A crazy fun theme for special moods.",
+          "feature1": "Explosion effects",
+          "feature2": "Surprise sounds",
+          "feature3": "Sparkling elements"
+        },
+        "kitty_2": {
+          "name": "Cat Theme PRO",
+          "description": "An updated version for true cat lovers!",
+          "feature1": "3D Meowing",
+          "feature2": "New animations",
+          "feature3": "Extra fluffiness"
+        },
+        "luxary_2": {
+          "name": "Elite Theme",
+          "description": "Even more luxury and sparkle.",
+          "feature1": "Diamond effect",
+          "feature2": "Exclusive icons"
+        }
+      },
+      
+      "subjects": {
+        "math": "Mathematics",
+        "physics": "Physics",
+        "biology": "Biology",
+        "chemistry": "Chemistry",
+        "history": "History",
+        "literature": "Literature"
+      },
+      
+      "ai_usage": {
+        "title": "How to use the AI assistant for learning",
+        "note": "⚠️ Remember: AI is a tool, not a replacement for independent learning!",
+        "steps": [
+          {
+            "title": "1. Open the AI assistant",
+            "description": "Go to the assistant page and choose a category: tasks, tests, topic explanations, etc."
+          },
+          {
+            "title": "2. Formulate your question",
+            "description": "Write a clear and specific question. For example: “Explain what a derivative is” or “Help me solve an equation.”"
+          },
+          {
+            "title": "3. Get the answer and learn",
+            "description": "The AI will give you an explanation, solution, or step-by-step guide. Use it to study, not as a cheat sheet."
+          },
+          {
+            "title": "4. Apply your knowledge",
+            "description": "After receiving the answer — test yourself, repeat the material, ask follow-up questions."
+          },
+          {
+            "title": "5. Use AI responsibly",
+            "description": "AI is a learning tool. Don’t use it to cheat. It's meant to help you understand and grow."
+          },
+          {
+            "title": "6. Get the most from AI by using it wisely",
+            "description": "Consistent and honest use of AI helps deepen understanding and build critical thinking skills."
+          }
+        ]
+      }
+      
+}
