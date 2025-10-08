@@ -14,13 +14,11 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            // ⚡ Отправляем POST на NestJS
             const res = await axios.post(
                 `${import.meta.env.VITE_API_URL}/login`,
                 { email, password }
             );
 
-            // В ответе у тебя приходит { access_token, user }
             localStorage.setItem("token", res.data.access_token);
             localStorage.setItem("user", JSON.stringify(res.data.user));
 
@@ -33,7 +31,7 @@ const Login = () => {
     };
 
     return (
-        <div className="container__main">
+        <div className={s.pageWrapper}>
             <div className={s.formWrapper}>
                 <h2 className={s.title}>
                     {t("login.title") || "Tizimga kirish"}
@@ -90,6 +88,8 @@ const Login = () => {
                     </p>
                 </form>
             </div>
+
+            <div className={s.imageBlock}></div>
         </div>
     );
 };

@@ -28,7 +28,6 @@ const TicTacToe = lazy(() => import('./components/TicTacToe/TicTacToe'));
 const Snake = lazy(() => import('./components/Snake/Snake'));
 const Games = lazy(() => import('./components/Games/Games'));
 const Tir = lazy(() => import('./components/Tir/Tir'));
-const Urods = lazy(() => import('./components/urods/urods'));
 const ChatGroup = lazy(() => import('./components/ChatGroup/ChatGroup'));
 const KnowledgeMaze = lazy(() => import('./components/KnowledgeMaze/KnowledgeMaze'));
 const MathBattle = lazy(() => import('./components/MathBattle/MathBattle'));
@@ -59,7 +58,7 @@ const App = () => {
     "/", "/ChatGroup", "/Register", "/Login", "/MainPage",
     "/Society", "/Tech", "/Culture", "/TicTacToe", "/Snake",
     "/Games", "/Tetris", "/Tir", "/Shop", "/news", "/bought", "/KnowledgeMaze", "/MathBattle", "/don","/MyTituls","/AiChat", "/AdminPanel", "/LeaderBoard", "/Inbox", "/Wallet", "/Achievements", "/Friends", "/Chat",
-    "/AISimulation","/urods"
+    "/AISimulation"
   ].includes(location.pathname);
 
   return (
@@ -82,7 +81,6 @@ const App = () => {
           <Route path="/Snake" element={<Snake />} />
           <Route path="/Games" element={<Games />} />
           <Route path="/Tir" element={<Tir />} />
-          <Route path="/urods" element={<Urods />} />
           <Route path="/Shop" element={<Magaz />} />
           <Route path="/ChatGroup" element={<ChatGroup />} />
           <Route path="/KnowledgeMaze" element={<KnowledgeMaze/>}/>

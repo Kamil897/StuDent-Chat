@@ -690,27 +690,27 @@
         "note": "⚠️ Remember: AI is a tool, not a replacement for independent learning!",
         "steps": [
           {
-            "title": "1. Open the AI assistant",
+            "title": "Open the AI assistant",
             "description": "Go to the assistant page and choose a category: tasks, tests, topic explanations, etc."
           },
           {
-            "title": "2. Formulate your question",
+            "title": "Formulate your question",
             "description": "Write a clear and specific question. For example: “Explain what a derivative is” or “Help me solve an equation.”"
           },
           {
-            "title": "3. Get the answer and learn",
+            "title": "Get the answer and learn",
             "description": "The AI will give you an explanation, solution, or step-by-step guide. Use it to study, not as a cheat sheet."
           },
           {
-            "title": "4. Apply your knowledge",
+            "title": "Apply your knowledge",
             "description": "After receiving the answer — test yourself, repeat the material, ask follow-up questions."
           },
           {
-            "title": "5. Use AI responsibly",
+            "title": "Use AI responsibly",
             "description": "AI is a learning tool. Don’t use it to cheat. It's meant to help you understand and grow."
           },
           {
-            "title": "6. Get the most from AI by using it wisely",
+            "title": "Get the most from AI by using it wisely",
             "description": "Consistent and honest use of AI helps deepen understanding and build critical thinking skills."
           }
         ]

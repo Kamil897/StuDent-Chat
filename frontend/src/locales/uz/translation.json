@@ -714,27 +714,27 @@
             "note": "⚠️ Eslab qol: AI bu — vosita, lekin mustaqil ta’lim o‘rnini bosmaydi!",
             "steps": [
               {
-                "title": "1. AI yordamchisini oching",
+                "title": "AI yordamchisini oching",
                 "description": "Yordamchi sahifasiga o‘ting va kerakli bo‘limni tanlang: vazifalar, testlar, mavzular tushuntirishi va boshqalar."
               },
               {
-                "title": "2. Savolni aniq yozing",
+                "title": "Savolni aniq yozing",
                 "description": "Aniq va tushunarli savol yozing. Masalan: “Hosila nima?” yoki “Tenglamani yechishda yordam bering.”"
               },
               {
-                "title": "3. Javobni oling va o‘rganing",
+                "title": "Javobni oling va o‘rganing",
                 "description": "AI sizga tushuntirish, yechim yoki bosqichma-bosqich ko‘rsatma beradi. Uni faqat o‘rganish uchun foydalaning, ko‘chirish uchun emas."
               },
               {
-                "title": "4. Bilimingizni sinab ko‘ring",
+                "title": "Bilimingizni sinab ko‘ring",
                 "description": "Javobni olgach — o‘zingizni sinang, mavzuni takrorlang, qo‘shimcha savollar bering."
               },
               {
-                "title": "5. AI'dan to‘g‘ri foydalaning",
+                "title": "AI'dan to‘g‘ri foydalaning",
                 "description": "AI — bu ta’lim yordamchisi. Uni ko‘chirish yoki aldayotgan kabi ishlatmang. U tushunishga yordam berish uchun yaratilgan."
               },
               {
-                "title": "6. AI'dan maksimal foyda olish uchun uni to‘g‘ri foydalaning",
+                "title": "AI'dan maksimal foyda olish uchun uni to‘g‘ri foydalaning",
                 "description": "AI'dan muntazam va halol foydalanish mavzuni chuqurroq tushunishga va tanqidiy fikrlashni rivojlantirishga yordam beradi."
               }
             ]

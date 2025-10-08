@@ -6,6 +6,7 @@ import TextCursor from "../TextCursor/TextCursor.jsx";
 import { useTranslation } from "react-i18next";
 import { FaRobot, FaLightbulb, FaBookOpen, FaCheck, FaExclamationTriangle } from "react-icons/fa";
 import ComplaintsOver from "../ComplainsOver/ComplaintsOver.jsx";
+import DarkVeil from "../DarkVeil/DarkVeil.jsx";
 
 const HomeHero = () => {
     const tooltipRef = useRef(null);
@@ -68,51 +69,38 @@ const HomeHero = () => {
       ];
     return (
         <>
+
+
             <section className={s.welcome_section}>
-                <h1>Student Chat</h1>
+
+                <h1>STUDENT CHAT</h1>
                 <h3>{t("help")}</h3>
-                <TextCursor
-                    text={t("text_cursor")}
-                    delay={0.01}
-                    spacing={200}
-                    followMouseDirection={true}
-                    randomFloat={true}
-                    exitDuration={0.3}
-                    removalInterval={40}
-                    maxPoints={10}
-                />
+               
             </section>
+
+
+
 
             <section className={s.active} id="section-О нас">
                 <div className={s.home_wrapper}>
+                    <div className={s.text}>
                     <h2 className={s.home_title}>{t("about.title")}</h2>
                     <p className={s.home_text}>{t("about.description")}</p>
-                </div>
-                <div className={s.home_img}>
-                    <img src="/hi.svg" alt="" />
+                    </div>
+                  
+              
+                    <img src="/about_us.png" alt="" />
                 </div>
             </section>
-{/* 
-            <section className={s.services} id="section-Наши преимущество">
-                <h1 style={{
-                        textAlign: "center",
-                        color: "#fff",
-                        fontSize: "42px",
-                        marginBottom: "60px",
-                        paddingTop: "40px",
-                    }}>
-                    {t("actions_section_title")}
-                </h1>
-                <Tabs />
-            </section> */}
+
+ 
 
             <section className={s.spotlight__cards}>
                 <h1 style={{
-                        textAlign: "center",
-                        color: "#fff",
+                        textAlign: "start",
+                        color: "#4c4c4c",
                         fontSize: "42px",
                         marginBottom: "60px",
-                        paddingTop: "40px",
                     }}>
                     {t("how_we_help.title")}
                 </h1>
@@ -135,54 +123,69 @@ const HomeHero = () => {
                 </div>
             </section>
 
+
             <section className={s.our_users}>
                 <h1 className={s.our_users_title} id="section-Почему выбирают нас">
                     {t("why_us.title")}
                 </h1>
 
                 <div className={s.content_our}>
-                    <div className={s.item}>
-                        <img className={s.item_img} src="/chart.png" alt="График" />
-                        <h2 className={s.item_text_desc}>{t("why_us.reasons.availability.title")}</h2>
-                        <p className={s.item_text_decor}>{t("why_us.reasons.availability.content")}</p>
+                    <div className={`${s.item} ${s.item_big}`}>
+                    <img className={s.item_img_big} src="/chart.png" alt="График" />
+                    <h2 className={s.item_text_desc}>{t("why_us.reasons.availability.title")}</h2>
+                    <p className={s.item_text_decor}>{t("why_us.reasons.availability.content")}</p>
                     </div>
 
-                    <div className={s.item}>
-                        <img className={s.item_img} src="/laptop.png" alt="Ноутбук" />
-                        <h2 className={s.item_text_desc}>{t("why_us.reasons.mentors.title")}</h2>
-                        <p className={s.item_text_decor}>{t("why_us.reasons.mentors.content")}</p>
-                    </div>
-
-                    <div className={s.item}>
-                        <img className={s.item_img} src="/house.png" alt="" />
+                    <div className={`${s.item} ${s.item_small_top}`}>
+                    <img className={s.item_img} src="/house.png" alt="Дом" />
+                    <div className={s.text_block}>
                         <h2 className={s.item_text_desc}>{t("why_us.reasons.safe_space.title")}</h2>
                         <p className={s.item_text_decor}>{t("why_us.reasons.safe_space.content")}</p>
                     </div>
-                </div>
-            </section>
+                    </div>
 
+                    <div className={`${s.item} ${s.item_small_bottom}`}>
+                    <img className={s.item_img} src="/laptop.png" alt="Ноутбук" />
+                    <div className={s.text_block}>
+                        <h2 className={s.item_text_desc}>{t("why_us.reasons.mentors.title")}</h2>
+                        <p className={s.item_text_decor}>{t("why_us.reasons.mentors.content")}</p>
+                    </div>
+                    </div>
+
+                </div>
+                </section>
+
+ 
             <section className={s.AI_usage}>
                 <div className={s.container_usage}>
                     <h1 className={s.title_usage}>{t("ai_usage.title")}</h1>
                     <div className={s.steps}>
                     {steps.map((step, index) => (
-                        <div key={index} className={s.step}>
-                        <div className={s.icon}>{step.icon}</div>
-                        <h2 className={s.stepTitle}>{t(`ai_usage.steps.${index}.title`)}</h2>
-                        <p className={s.description_usage}>{t(`ai_usage.steps.${index}.description`)}</p>
+                        <div
+                        key={index}
+                        className={s.step}
+                        data-step={`0${index + 1}`} 
+                        >
+                        <h2 className={s.stepTitle}>
+                            {t(`ai_usage.steps.${index}.title`)}
+                        </h2>
+                        <p className={s.description_usage}>
+                            {t(`ai_usage.steps.${index}.description`)}
+                        </p>
                         </div>
                     ))}
                     </div>
+
                     <p className={s.note}>{t("ai_usage.note")}</p>
                 </div>
             </section>
-            {/* <style>
-            @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-            </style> */}
+
 
             <section className={s.complaints_section}>
                 <ComplaintsOver />
             </section>
+
+           
         </>
     );
 };
