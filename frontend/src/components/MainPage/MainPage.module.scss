@@ -1,9 +1,19 @@
+@font-face {
+   font-family: "EduNSWACTCursive-VariableFont_wght";
+   src: local("EduNSWACTCursive-VariableFont_wght"), url("fonts/EduNSWACTCursive-VariableFont_wght.ttf") format("truetype");
+   font-weight: 500;
+   font-display: swap;
+ }
+ :root {
+   --font-family: "Lobster-Regular", sans-serif;
+ }
 .sects {
+   font-family: "Lobster-Regular";
    display: flex;
    justify-content: center;
    align-items: flex-start;
    flex-direction: row;
-   margin: 100px auto; 
+   margin: 114px auto; 
 
    @media (max-width: 600px) {
       flex-direction: column;
@@ -12,7 +22,6 @@
       margin: 20px;
    }
 }
-
 .section_2 {
    margin-right: 100px; 
    @media (max-width: 800px) {

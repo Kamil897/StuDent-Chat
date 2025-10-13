@@ -134,14 +134,18 @@ export default function Leaderboard() {
         {activeTab === "shop" && (
           <div className={styles.panel}>
             <div className={styles.table}>
-              <div className={`${styles.row} ${styles.head}`}>
+              <div className={`${styles.row_shop} ${styles.head}`}>
                 <div className={styles.cell}>#</div>
                 <div className={styles.cell}>Игрок</div>
                 <div className={styles.cell}>Бонусы</div>
                 <div className={styles.cell}>Потрачено</div>
                 <div className={styles.cell}>Баланс</div>
               </div>
-              {currentPlayers.map((p, i) => (
+              {currentPlayers.length === 0 ? (
+                  <div className={styles.emptyState}>
+                    Нет данных для отображения
+                  </div>
+                ) : (currentPlayers.map((p, i) => (
                 <div className={styles.row} key={p.id}>
                   <div className={styles.cell}>{startIndex + i + 1}</div>
                   <div className={`${styles.cell} ${styles.playerCell}`}>
@@ -159,7 +163,7 @@ export default function Leaderboard() {
                     {p.bonuses - p.spent}
                   </div>
                 </div>
-              ))}
+              )))}
             </div>
           </div>
         )}

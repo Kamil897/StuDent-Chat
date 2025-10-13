@@ -30,7 +30,7 @@
     },
 
     "how_we_help": {
-      "title": "How WE can help",
+      "title": "How we can help",
       "sections": {
         "community": {
           "title": "Communication and mutual support",
@@ -76,6 +76,7 @@
       "groups": "Groups",
       "news": "Intructions for using AI",
       "institutions": "Institutions",
+      "ai_assistant": "Cognia AI",
       "account": "My Account",
       "slogan": "Learn. Communicate. Grow."
     },

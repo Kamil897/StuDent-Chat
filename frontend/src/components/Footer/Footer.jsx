@@ -10,11 +10,11 @@ const Footer = () => {
     <footer className={s.footer}>
       <div className={s.container}>
 
-        {/* Логотип */}
+        {/* Логотип
         <div className={s.logoSection}>
           <img src="/Sdct.png" alt="SDCT Logo" className={s.logo} />
           <span className={s.logoText}>STUDENTCHAT</span>
-        </div>
+        </div> */}
 
         <div className={s.center} aria-hidden={false}>
           <blockquote className={s.quote}>
@@ -25,7 +25,7 @@ const Footer = () => {
         {/* Ссылки */}
         <nav className={s.nav}>
           <Link to="/ChatGroup">{t("footer.groups")}</Link>
-          <Link to="/AiChat">Cognia AI</Link>
+          <Link to="/AiChat">{t("footer.ai_assistant")}</Link>
           <Link to="/MainPage">{t("footer.account")}</Link>
         </nav>
 
@@ -33,7 +33,7 @@ const Footer = () => {
 
       {/* Нижняя часть */}
       <div className={s.bottom}>
-        <p>© 2025 OOO STUDENTCHAT. Все права защищены.</p>
+        <span>© 2025 OOO STUDENTCHAT.Все права защищены.</span>
         <p>contact@student-chat.online</p>
       </div>
     </footer>

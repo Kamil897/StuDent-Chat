@@ -69,18 +69,9 @@ const HomeHero = () => {
       ];
     return (
         <>
-
-
             <section className={s.welcome_section}>
-
-                <h1>STUDENT CHAT</h1>
-                <h3>{t("help")}</h3>
-               
+                <h1>STUDENT CHAT</h1>               
             </section>
-
-
-
-
             <section className={s.active} id="section-О нас">
                 <div className={s.home_wrapper}>
                     <div className={s.text}>
@@ -92,9 +83,6 @@ const HomeHero = () => {
                     <img src="/about_us.png" alt="" />
                 </div>
             </section>
-
- 
-
             <section className={s.spotlight__cards}>
                 <h1 style={{
                         textAlign: "start",
@@ -122,8 +110,6 @@ const HomeHero = () => {
                     </SpotlightCard>
                 </div>
             </section>
-
-
             <section className={s.our_users}>
                 <h1 className={s.our_users_title} id="section-Почему выбирают нас">
                     {t("why_us.title")}
@@ -153,9 +139,7 @@ const HomeHero = () => {
                     </div>
 
                 </div>
-                </section>
-
- 
+            </section>
             <section className={s.AI_usage}>
                 <div className={s.container_usage}>
                     <h1 className={s.title_usage}>{t("ai_usage.title")}</h1>
@@ -179,13 +163,9 @@ const HomeHero = () => {
                     <p className={s.note}>{t("ai_usage.note")}</p>
                 </div>
             </section>
-
-
             <section className={s.complaints_section}>
                 <ComplaintsOver />
             </section>
-
-           
         </>
     );
 };

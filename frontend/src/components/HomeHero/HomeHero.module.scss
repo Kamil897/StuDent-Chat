@@ -1,13 +1,14 @@
-// @font-face {
-//   font-family: "Soyuz Grotesk";
-//   src: local("Soyuz Grotesk"), url("fonts/Soyuz Grotesk Bold.woff") format("truetype");
-//   font-weight: 500;
-//   font-display: swap;
-// }
+@font-face {
+  font-family: "BBHSansHegarty-Regular";
+  src: local("BBHSansHegarty-Regular"), url("fonts/BBHSansHegarty-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+}
 :root {
-  --font-family: "Inter", sans-serif;
+  --font-family: "BBHSansHegarty-Regular", sans-serif;
 }
 .welcome_section {
+  font-family: "BBHSansHegarty-Regular";
   height: 90dvh;
   display: flex;
   justify-content: center;
@@ -17,13 +18,12 @@
  background-color: #f6f6f6;
  background-image: url("/background.png");
  background-position: center;
- 
  background-repeat: no-repeat;
  h1 {
   font-family: var(--font-family);
-font-weight: 700;
-font-size: 64px;
-color: #f6f6f6;
+  font-weight: 700;
+  font-size: 64px;
+  color: #f6f6f6;
  }
  p {
   font-family: var(--font-family);
@@ -41,17 +41,15 @@ color: #f6f6f6;
   padding: 40px 20px;
 
   h2 {
-    font-family: var(--font-family);
     font-weight: 600;
     font-size: clamp(24px, 4vw, 36px); 
     color: #4c4c4c;
-  }
+    }
 
   p {
-    font-family: var(--font-family);
     font-weight: 400;
     font-size: clamp(16px, 2.5vw, 24px); 
-    color: #4c4c4c;
+    color: #4c4c4c;    
     line-height: 1.5;
   }
 
@@ -109,14 +107,14 @@ color: #f6f6f6;
     h2 {
       font-weight: 600;
       font-size: 28px;
-      color: #4c4c4c;
+      color: #4c4c4c;      
       padding-bottom: 15px;
     }
 
     p {
       font-weight: 400;
       font-size: 18px;
-      color: #000;
+      color: #4c4c4c;    
     }
   }
 }
@@ -132,7 +130,7 @@ color: #f6f6f6;
     font-size: 38px;
     font-weight: 700;
     margin-bottom: 40px;
-    color: #111;
+    color: #4c4c4c;  
   }
 
   .content_our {
@@ -168,14 +166,14 @@ color: #f6f6f6;
         text-align: center;
         font-weight: 600;
         font-size: 32px;
-        color: #4c4c4c;
+        color: #4c4c4c;      
       }
 
       .item_text_decor {
         text-align: center;
         font-weight: 400;
         font-size: 20px;
-        color: #000;
+        color: #4c4c4c;
         max-width: 400px;
         margin: 0 auto;
       }
@@ -218,11 +216,12 @@ color: #f6f6f6;
     color: #4c4c4c;
     margin-bottom: 30px;
   }
+  
 
   .item_text_decor {
     font-weight: 400;
     font-size: 16px;
-    color: #000;
+    color: #4c4c4c;
   }
   }
 }
@@ -241,17 +240,17 @@ color: #f6f6f6;
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 40px;
-    color: #111;
+    color: #4c4c4c;
     text-align: center;
   }
 
   .steps {
-
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: auto auto;
     gap: 24px;
     margin-bottom: 32px;
+    
     .step {
       background: linear-gradient(180deg, #eef6ff 0%, #f3f0ff 100%);
       border-radius: 20px;
@@ -270,7 +269,7 @@ color: #f6f6f6;
         position: absolute;
         top: -12px;
         left: 12px;
-        background: white;
+        background: rgba(158, 144, 252, 0.37);        
         border-radius: 50%;
         padding: 6px 10px;
         font-weight: 600;
@@ -288,7 +287,7 @@ color: #f6f6f6;
       .description_usage {
         font-weight: 400;
         font-size: 16px;
-        color: #000;
+        color: #4c4c4c;
       }
     }
   
@@ -327,7 +326,7 @@ color: #f6f6f6;
 
   .note {
     font-size: 13px;
-    color: #666;
+    color: #4c4c4c;
     margin-top: 16px;
   }
 }

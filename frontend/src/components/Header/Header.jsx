@@ -44,7 +44,7 @@ const Header = () => {
           {/* Логотип */}
           <div className={s.logo}>
             <Link onClick={CloseMenu} to={'/'} className={s.h1__logo}>
-              StuDent ChaT
+              STUDENT-CHAT
             </Link>
           </div>
 
@@ -78,7 +78,6 @@ const Header = () => {
               </div>
             ) : (
               <div className={s.userSection}>
-                <NotificationBell />
                 <Link className={s.main} onClick={CloseMenu} to={'/MainPage'}>
                   <img
                     src={userData.avatar || '/profileimg.png'}
@@ -89,12 +88,11 @@ const Header = () => {
                 <span className={s.userName}>
                   {userData.firstName || "User"}
                 </span>
-                {/* Если захочешь logout кнопку */}
-                {/* <button onClick={handleLogout} className={s.logoutBtn}>
-                  {t("menu.logout")}
-                </button> */}
               </div>
             )}
+
+            <NotificationBell />
+
           </div>
 
           {/* Бургер */}
@@ -102,6 +100,8 @@ const Header = () => {
             <span></span>
             <span></span>
           </div>
+
+
 
           {/* Переключение языков */}
           <div className={s.langSwitcher}>
