@@ -711,7 +711,7 @@
 
           "ai_usage": {
             "title": "AI yordamchisidan o‘qish uchun qanday foydalanish kerak",
-            "note": "⚠️ Eslab qol: AI bu — vosita, lekin mustaqil ta’lim o‘rnini bosmaydi!",
+            "note": "AI bu — vosita, lekin mustaqil ta’lim o‘rnini bosmaydi!",
             "steps": [
               {
                 "title": "AI yordamchisini oching",

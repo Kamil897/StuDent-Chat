@@ -688,7 +688,7 @@
       
       "ai_usage": {
         "title": "How to use the AI assistant for learning",
-        "note": "⚠️ Remember: AI is a tool, not a replacement for independent learning!",
+        "note": "AI is a tool, not a replacement for independent learning!",
         "steps": [
           {
             "title": "Open the AI assistant",
