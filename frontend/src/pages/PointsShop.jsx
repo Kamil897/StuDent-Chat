@@ -9,10 +9,15 @@ const API_MAIN = "http://localhost:7777/shop";   // backend-main
 const API_LOGIN = "http://localhost:3000";       // backend-login
 
 const pointPackages = [
-    { id: 1, amount: 500, label: "500 Points (Free)", free: true },
-    { id: 2, amount: 1000, label: "1000 Points" },
-    { id: 3, amount: 2500, label: "2500 Points" },
-    { id: 4, amount: 5000, label: "5000 Points" },
+    { id: 1, amount: 1, label: "Premium for Cognia", free: true },
+    { id: 1, amount: 1, label: "Premium for IELTS", free: true },
+    { id: 2, amount: 3, label: "Premium for Cognia" },
+    { id: 2, amount: 3, label: "Premium for IELTS" },
+    { id: 3, amount: 6, label: "Premium for Cognia" },
+    { id: 3, amount: 6, label: "Premium for IELTS" },
+    { id: 4, amount: 12, label: "Premium for Cognia" },
+    { id: 4, amount: 12, label: "Premium for IELTS" },
+
 ];
 
 const PointsShop = () => {
@@ -115,7 +120,7 @@ const PointsShop = () => {
                 <button className={s.buyBtn}>{t('games.back')}</button>
             </Link>
 
-            <h1 className={s.title}>Buy Points</h1>
+            <h1 className={s.title}>Subcriptions</h1>
 
             <div className={s.points}>
                 Your Points: <span>{points}</span>
@@ -127,7 +132,7 @@ const PointsShop = () => {
                 {pointPackages.map((pkg) => (
                     <div key={pkg.id} className={s.card}>
                         <h3>{pkg.label}</h3>
-                        <p className={s.amount}>+{pkg.amount} pts</p>
+                        <p className={s.amount}>{pkg.amount} months</p>
                         <button
                             className={s.buyBtn}
                             onClick={() =>

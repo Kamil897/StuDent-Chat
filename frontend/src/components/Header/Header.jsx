@@ -39,49 +39,33 @@ const Header = () => {
 
   return (
     <header className={s.header}>
-      <div className={s.container__main}>
+      <div className={s.container}>
         <nav className={s.nav}>
-          {/* Логотип */}
-          <div className={s.logo}>
-            <Link onClick={CloseMenu} to={'/'} className={s.h1__logo}>
-              STUDENT-CHAT
-            </Link>
+          {/* Центр: Лого и ссылки */}
+          <div className={s.center}>
+            <Link to="/" className={s.logo}>Student Chat</Link>
+            <Link to="/AiChat" className={s.link}>Cognia AI</Link>
+            <Link to="/AISimulation" className={s.link}>Trai</Link>
           </div>
 
-          {/* Ссылки */}
-          <div className={`${s.links} ${active ? s.active : ''}`}>
-            {/* Cognia */}
-            <div className={s.group}>
-              <Link className={`${s.teach} ${s.cognia}`} onClick={CloseMenu} to={'/AiChat'}>
-                Cognia AI
-              </Link>
+          {/* Правая часть */}
+          <div className={s.right}>
+            <NotificationBell />
+
+            <div className={s.lang}>
+              <select onChange={(e) => i18n.changeLanguage(e.target.value)}>
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+                <option value="uz">UZ</option>
+              </select>
             </div>
-
-            <div className={s.divider}></div>
-
-            {/* IELTS */}
-            <div className={s.group}>
-              <Link className={`${s.teach} ${s.ielts}`} onClick={CloseMenu} to={'/AISimulation'}>
-                IELTS Simulation
-              </Link>
-            </div>
-
-            {/* Авторизация */}
-            {!userData ? (
-              <div className={s.authButtons}>
-                <Link onClick={CloseMenu} to={'/login'}>
-                  <button className={s.loginBtn}>{t("menu.login")}</button>
-                </Link>
-                <Link onClick={CloseMenu} to={'/register'}>
-                  <button className={s.registerBtn}>{t("menu.register")}</button>
-                </Link>
-              </div>
-            ) : (
-              <div className={s.userSection}>
-                <Link className={s.main} onClick={CloseMenu} to={'/MainPage'}>
+            
+            {userData ? (
+              <div className={s.profile}>
+                <Link to="/MainPage">
                   <img
-                    src={userData.avatar || '/profileimg.png'}
-                    alt="Avatar"
+                    src={userData.avatar || "/profileimg.png"}
+                    alt="avatar"
                     className={s.avatar}
                   />
                 </Link>
@@ -89,25 +73,17 @@ const Header = () => {
                   {userData.firstName || "User"}
                 </span>
               </div>
+            ) : (
+              <div className={s.authButtons}>
+                <Link to="/login">
+                  <button className={s.loginBtn}>{t("menu.login")}</button>
+                </Link>
+                <Link to="/register">
+                  <button className={s.registerBtn}>{t("menu.register")}</button>
+                </Link>
+              </div>
             )}
 
-            <NotificationBell />
-
-          </div>
-
-          {/* Бургер */}
-          <div onClick={toggleBurger} className={`${s.burger} ${active ? s.active : ''}`}>
-            <span></span>
-            <span></span>
-          </div>
-
-
-
-          {/* Переключение языков */}
-          <div className={s.langSwitcher}>
-            <button onClick={() => i18n.changeLanguage('ru')}>RU</button>
-            <button onClick={() => i18n.changeLanguage('en')}>EN</button>
-            <button onClick={() => i18n.changeLanguage('uz')}>UZ</button>
           </div>
         </nav>
       </div>

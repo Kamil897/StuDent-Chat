@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { FaRobot, FaLightbulb, FaBookOpen, FaCheck, FaExclamationTriangle } from "react-icons/fa";
 import ComplaintsOver from "../ComplainsOver/ComplaintsOver.jsx";
 import DarkVeil from "../DarkVeil/DarkVeil.jsx";
+import Shuffle from "../ShuffleText/ShuffleText.jsx";
 
 const HomeHero = () => {
     const tooltipRef = useRef(null);
@@ -70,7 +71,19 @@ const HomeHero = () => {
     return (
         <>
             <section className={s.welcome_section}>
-                <h1>STUDENT CHAT</h1>               
+            <Shuffle
+                text="STUDENT CHAT"
+                shuffleDirection="right"
+                duration={0.35}
+                animationMode="evenodd"
+                shuffleTimes={1}
+                ease="power3.out"
+                stagger={0.03}
+                threshold={0.1}
+                triggerOnce={true}
+                triggerOnHover={true}
+                respectReducedMotion={true}
+                />
             </section>
             <section className={s.active} id="section-О нас">
                 <div className={s.home_wrapper}>

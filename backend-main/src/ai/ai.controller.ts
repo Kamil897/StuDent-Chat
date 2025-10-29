@@ -9,13 +9,14 @@ export class AiController {
   async ask(
     @Body('message') message: string,
     @Body('userId') userId: string = 'defaultUser',
-    @Body('style') style: string = 'default',
+    @Body('mode') mode: 'online' | 'offline' = 'offline',
     @Body('history') history?: any[],
   ) {
     if (!message) {
       return { error: 'Message is required' };
     }
 
-    return this.aiService.ask(userId, message, style, history);
+    // Передаём все 4 аргумента
+    return this.aiService.ask(userId, message, mode, history);
   }
 }
