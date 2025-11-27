@@ -84,7 +84,7 @@ Essay:\n${essay}`;
     let parsed: any;
     try {
       parsed = JSON.parse(raw);
-    } catch (_) {
+    } catch {
       // try to extract JSON substring
       const start = raw.indexOf('{');
       const end = raw.lastIndexOf('}');

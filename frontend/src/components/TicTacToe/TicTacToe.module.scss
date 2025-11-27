@@ -1,80 +1,388 @@
+// Variables
+$primary-color: #4d2a96;
+$primary-hover: #6b38ce;
+$primary-light: #8b5cf6;
+$success-color: #27ae60;
+$error-color: #e74c3c;
+$draw-color: #f39c12;
+$x-color: #ff4757;
+$o-color: #1e90ff;
+$border-color: #e0e0e0;
+$background: #f8f9fa;
+$menu-background: rgba(255, 255, 255, 0.98);
+$square-size: 100px;
+$gap: 12px;
+$transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+// Animations
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px) rotate(-5deg); }
+  75% { transform: translateX(8px) rotate(5deg); }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(77, 42, 150, 0.7);
+  }
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 8px rgba(77, 42, 150, 0);
+  }
+}
+
+@keyframes winningGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(39, 174, 96, 0.6), inset 0 0 15px rgba(39, 174, 96, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(39, 174, 96, 1), inset 0 0 20px rgba(39, 174, 96, 0.4);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes lastMoveHighlight {
+  0% { box-shadow: 0 0 0 0 rgba(77, 42, 150, 0.6); }
+  100% { box-shadow: 0 0 0 8px rgba(77, 42, 150, 0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+// Main container
 .tic-tac-toe {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Arial', sans-serif;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 20px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
 }
 
+// Selection Menu
 .SelectionMenu {
-  background-color: #ffffff75;
-  padding: 100px;
-  border: none;
-  border-radius: 12px;
+  background: $menu-background;
+  backdrop-filter: blur(20px);
+  padding: 50px 70px;
+  border-radius: 24px;
   text-align: center;
-  margin-top: 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.6s $transition-smooth;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    margin-bottom: 40px;
+    color: $primary-color;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  h3 {
+    font-size: clamp(18px, 3vw, 22px);
+    margin-bottom: 15px;
+    color: #555;
+    font-weight: 600;
+  }
 }
 
-.SelectionMenu h1 {
-  font-size: 50px;
-  margin-bottom: 20px;
+// Mode Selection
+.modeSelection, .difficultySelection {
+  margin-bottom: 35px;
+  animation: slideIn 0.6s $transition-smooth 0.1s backwards;
 }
 
+.modeButtons, .difficultyButtons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.modeButton, .difficultyButton {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid $border-color;
+  border-radius: 12px;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s $transition-smooth;
+
+  &:hover {
+    border-color: $primary-color;
+    color: $primary-color;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(77, 42, 150, 0.2);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, $primary-color 0%, $primary-hover 100%);
+    color: white;
+    border-color: $primary-color;
+    box-shadow: 0 6px 20px rgba(77, 42, 150, 0.4);
+  }
+
+  &:focus {
+    outline: 3px solid $primary-light;
+    outline-offset: 3px;
+  }
+}
+
+// Symbol Buttons
 .symbolButtons {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
-}
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  animation: slideIn 0.6s $transition-smooth 0.2s backwards;
 
-.symbolButtons p {
-  margin: 15px;
-  font-size: 42px;
+  p {
+    margin: 0;
+    font-size: clamp(24px, 4vw, 36px);
+    color: #999;
+    font-weight: 600;
+  }
 }
 
 .symbolButton {
-  padding: 10px 20px;
-  font-size: 50px;
-  border: none;
-  border-radius: 5px;
+  padding: 20px 40px;
+  font-size: clamp(36px, 5vw, 48px);
+  font-weight: 900;
+  border: 3px solid $primary-color;
+  border-radius: 16px;
+  background: white;
+  color: $primary-color;
   cursor: pointer;
-  transition: background 0.3s, font-size 0.5s;
+  transition: all 0.3s $transition-bounce;
+  min-width: 100px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(77, 42, 150, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  &:hover {
+    transform: scale(1.15) rotate(-5deg);
+    color: white;
+    background: linear-gradient(135deg, $primary-color 0%, $primary-hover 100%);
+    box-shadow: 0 10px 30px rgba(77, 42, 150, 0.4);
+
+    &::before {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  &:active {
+    transform: scale(1.05);
+  }
+
+  &:focus {
+    outline: 3px solid $primary-light;
+    outline-offset: 5px;
+  }
 }
 
-.symbolButton:hover {
-  font-size: 65px;
-  color: white;
-  background-color: #45a049;
+// Statistics Preview
+.statsPreview {
+  margin-top: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, rgba(77, 42, 150, 0.05) 0%, rgba(107, 56, 206, 0.05) 100%);
+  border-radius: 16px;
+  animation: slideIn 0.6s $transition-smooth 0.3s backwards;
+
+  h3 {
+    margin-bottom: 20px;
+    color: $primary-color;
+  }
 }
 
-.turn-indicator {
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s $transition-smooth;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.statValue {
+  font-size: 32px;
+  font-weight: 800;
+  color: $primary-color;
+  margin-bottom: 5px;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #777;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+// Game Header
+.gameHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
   margin-bottom: 25px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+// Turn indicator
+.turn-indicator {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .turn-message {
-  font-size: 22px;
+  font-size: clamp(18px, 3vw, 22px);
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  padding: 12px 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s $transition-smooth;
+  animation: fadeIn 0.5s $transition-smooth;
+
+  &.win {
+    background: linear-gradient(135deg, $success-color 0%, #2ecc71 100%);
+    animation: fadeIn 0.5s $transition-smooth, scaleUp 1.5s ease infinite;
+  }
+
+  &.lose {
+    background: linear-gradient(135deg, $error-color 0%, #c0392b 100%);
+    animation: fadeIn 0.5s $transition-smooth, shake 0.6s ease;
+  }
+
+  &.draw {
+    background: linear-gradient(135deg, $draw-color 0%, #e67e22 100%);
+    animation: fadeIn 0.5s $transition-smooth, pulse 2s ease infinite;
+  }
 }
 
-.turn-message.win {
-  color: #27ae60;
-  animation: fadeIn 0.5s ease, scaleUp 1s ease;
+// Move Counter
+.moveCounter {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.turn-message.lose {
-  color: #e74c3c;
-  animation: fadeIn 0.5s ease, shake 0.5s ease;
-}
-
-.turn-message.draw {
-  color: #f39c12;
-  animation: fadeIn 0.5s ease;
-}
-
+// Game Board
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  gap: 10px;
-  margin-bottom: 20px;
+  grid-template-columns: repeat(3, $square-size);
+  grid-template-rows: repeat(3, $square-size);
+  gap: $gap;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
 }
 
 .square-container {
@@ -84,117 +392,362 @@
 }
 
 .square {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 52px;
-  border: 2px solid #ccc;
-  transition: all 0.3s ease;
+  font-weight: 900;
+  background: white;
+  border: 3px solid $border-color;
+  border-radius: 12px;
   cursor: pointer;
+  transition: all 0.3s $transition-smooth;
   box-sizing: border-box;
-  border-radius: 10px;
-}
+  position: relative;
+  overflow: hidden;
 
-.square.occupied {
-  animation: fadeIn 0.5s ease;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(77, 42, 150, 0.1), transparent);
+    transition: left 0.5s;
+  }
+
+  &:hover:not(:disabled):not(.occupied) {
+    background: linear-gradient(135deg, rgba(77, 42, 150, 0.05) 0%, rgba(107, 56, 206, 0.05) 100%);
+    border-color: $primary-color;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(77, 42, 150, 0.2);
+
+    &::before {
+      left: 100%;
+    }
+  }
+
+  &:active:not(:disabled):not(.occupied) {
+    transform: scale(0.98);
+  }
+
+  &.occupied {
+    cursor: not-allowed;
+    animation: fadeIn 0.3s $transition-smooth;
+  }
+
+  &.winning {
+    animation: winningGlow 1.5s ease infinite;
+    border-color: $success-color;
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.1) 0%, rgba(46, 204, 113, 0.1) 100%);
+    z-index: 10;
+  }
+
+  &.lastMove {
+    animation: lastMoveHighlight 1s ease;
+    border-color: $primary-light;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $primary-color;
+    outline-offset: 3px;
+  }
 }
 
 .symbol {
-  animation: popIn 0.5s ease;
+  animation: popIn 0.5s $transition-bounce;
+  position: relative;
+  z-index: 5;
+
+  &.x {
+    color: $x-color;
+    text-shadow: 
+      2px 2px 4px rgba(255, 71, 87, 0.3),
+      0 0 10px rgba(255, 71, 87, 0.2);
+  }
+
+  &.o {
+    color: $o-color;
+    text-shadow: 
+      2px 2px 4px rgba(30, 144, 255, 0.3),
+      0 0 10px rgba(30, 144, 255, 0.2);
+  }
 }
 
-.symbol.x {
-  color: #ff4757;
+// Controls
+.controls {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.symbol.o {
-  color: #1e90ff;
-}
-
-.reset-button {
+.control-button {
   color: white;
   border-radius: 12px;
-  background-color: #4d2a96;
+  background: linear-gradient(135deg, $primary-color 0%, $primary-hover 100%);
   border: none;
-  padding: 10px 30px;
-  font-size: 18px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
+  transition: all 0.3s $transition-smooth;
+  box-shadow: 0 4px 15px rgba(77, 42, 150, 0.3);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(77, 42, 150, 0.4);
+
+    &::before {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(77, 42, 150, 0.3);
+  }
+
+  &:focus {
+    outline: 3px solid $primary-light;
+    outline-offset: 3px;
+  }
 }
 
-.reset-button:hover {
-  background-color: #6b38ce;
-}
-
+// Game Over Menu
 .menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  background-color: rgba(255, 255, 255, 0.585);
-  padding: 30px;
-  border-radius: 15px;
+  background: $menu-background;
+  backdrop-filter: blur(20px);
+  padding: 45px 55px;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  transition: transform 0.3s ease-in-out;
-}
+  transition: transform 0.4s $transition-bounce;
+  max-width: 400px;
+  width: 90%;
 
-.menu.show {
-  transform: translate(-50%, -50%) scale(1);
+  &.visible {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, $primary-color, $primary-hover, $primary-light);
+    border-radius: 24px;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(10px);
+  }
 }
 
 .menu-header {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .menu-title {
-  font-size: 26px;
-  text-align: center;
-  margin-bottom: 15px;
+  font-size: clamp(24px, 4vw, 32px);
+  color: $primary-color;
+  margin: 0 0 10px 0;
+  font-weight: 800;
+  animation: float 2s ease-in-out infinite;
+}
+
+.pointsEarned {
+  font-size: 20px;
+  font-weight: 700;
+  color: $success-color;
+  margin: 10px 0 0 0;
+  animation: scaleUp 1s ease infinite;
 }
 
 .menu-button {
+  width: 100%;
   font-size: 18px;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 8px;
+  font-weight: 600;
+  padding: 14px 30px;
+  border: 2px solid $primary-color;
+  border-radius: 12px;
+  background: white;
+  color: $primary-color;
   cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 12px;
+  transition: all 0.3s $transition-smooth;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, $primary-color 0%, $primary-hover 100%);
+    transition: left 0.3s $transition-smooth;
+    z-index: -1;
+  }
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:hover {
+    color: white;
+    border-color: $primary-hover;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(77, 42, 150, 0.3);
+
+    &::before {
+      left: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(77, 42, 150, 0.2);
+  }
+
+  &:focus {
+    outline: 3px solid $primary-light;
+    outline-offset: 3px;
+  }
 }
 
-.menu-button:hover {
-  color: white;
-  background-color: #45a049;
-  transform: scale(1.1);
+// Responsive Design
+@media (max-width: 768px) {
+  .tic-tac-toe {
+    padding: 15px;
+  }
+
+  .SelectionMenu {
+    padding: 35px 45px;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 85px);
+    grid-template-rows: repeat(3, 85px);
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .square {
+    font-size: 44px;
+  }
+
+  .gameHeader {
+    max-width: 340px;
+  }
+
+  .menu {
+    padding: 35px 40px;
+  }
 }
 
-.menu-button:active {
-  color: white;
-  background-color: #3e8e41;
+@media (max-width: 480px) {
+  .SelectionMenu {
+    padding: 25px 30px;
+  }
+
+  .symbolButtons {
+    gap: 15px;
+
+    p {
+      font-size: 28px;
+    }
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 75px);
+    grid-template-rows: repeat(3, 75px);
+    gap: 8px;
+    padding: 15px;
+  }
+
+  .square {
+    font-size: 38px;
+    border-width: 2px;
+  }
+
+  .menu {
+    padding: 25px 30px;
+  }
+
+  .menu-button, .control-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
 
-.centeredMenu {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+// Accessibility
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
-.visible {
-  display: flex;
-}
+// Dark mode support (optional)
+@media (prefers-color-scheme: dark) {
+  .SelectionMenu, .menu {
+    background: rgba(30, 30, 30, 0.98);
+    color: #fff;
 
-.hidden {
-  display: none;
+    h1, h2, h3 {
+      color: $primary-light;
+    }
+  }
+
+  .board {
+    background: rgba(40, 40, 40, 0.95);
+  }
+
+  .square {
+    background: #2a2a2a;
+    border-color: #444;
+
+    &:hover:not(:disabled):not(.occupied) {
+      background: rgba(77, 42, 150, 0.2);
+    }
+  }
 }

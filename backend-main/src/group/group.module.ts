@@ -4,7 +4,6 @@ import { GroupController } from './group.controller';
 import { PrismaService } from '../prisma/prisma.service';
 import { PrismaModule } from '../prisma/prisma.module';
 
-
 @Module({
   imports: [PrismaModule],
   controllers: [GroupController],

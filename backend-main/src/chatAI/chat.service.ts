@@ -7,6 +7,9 @@ export class ChatService {
   constructor(private prisma: PrismaService) {}
 
   async getMessagesForUser(userId: number) {
-    return this.prisma.aiMessage.findMany({ where: { userId }, orderBy: { createdAt: 'desc' } });
+    return this.prisma.aiMessage.findMany({
+      where: { userId },
+      orderBy: { createdAt: 'desc' },
+    });
   }
 }

@@ -1,10 +1,10 @@
-import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { CreateAttendanceDto, UpdateAttendanceDto } from './dto';
 import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
 export class AttendanceService {
-  constructor(private readonly prisma: PrismaService) { }
+  constructor(private readonly prisma: PrismaService) {}
 
   async create(createAttendanceDto: CreateAttendanceDto) {
     try {
@@ -15,7 +15,9 @@ export class AttendanceService {
       });
 
       if (!preschooler) {
-        throw new Error(`Preschooler with ID ${createAttendanceDto.preschooler_id} not found`);
+        throw new Error(
+          `Preschooler with ID ${createAttendanceDto.preschooler_id} not found`,
+        );
       }
 
       const date = new Date(createAttendanceDto.date);
@@ -26,9 +28,13 @@ export class AttendanceService {
       return await this.prisma.attendance.create({
         data: {
           date: date,
-          check_in_time: new Date(`${createAttendanceDto.date}T${createAttendanceDto.check_in_time}.000Z`),
+          check_in_time: new Date(
+            `${createAttendanceDto.date}T${createAttendanceDto.check_in_time}.000Z`,
+          ),
           check_out_time: createAttendanceDto.check_out_time
-            ? new Date(`${createAttendanceDto.date}T${createAttendanceDto.check_out_time}.000Z`)
+            ? new Date(
+                `${createAttendanceDto.date}T${createAttendanceDto.check_out_time}.000Z`,
+              )
             : undefined,
           preschooler_id: createAttendanceDto.preschooler_id,
         },

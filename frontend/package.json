@@ -2,6 +2,7 @@
     "name": "sdct111-main",
     "private": true,
     "version": "0.0.0",
+    "type": "module",
     "proxy": "http://localhost:5173",
     "scripts": {
         "dev": "vite",

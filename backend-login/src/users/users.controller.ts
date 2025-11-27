@@ -1,4 +1,4 @@
-import { Controller, Get, Param, Patch, UseGuards, Body } from '@nestjs/common';
+import { Controller, Get, Param, Patch, UseGuards } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { AuthGuard } from '@nestjs/passport';
 import { Roles } from '../common/roles.decorator';

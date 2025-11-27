@@ -1,12 +1,13 @@
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { IeltsWritingDto, IeltsReadingDto } from './dto';
 import OpenAI from 'openai';
+import { PrismaService } from '../prisma/prisma.service';
 
 @Injectable()
 export class IeltsService {
   private client: OpenAI;
 
-  constructor() {
+  constructor(private readonly prisma: PrismaService) {
     this.client = new OpenAI({
       apiKey: process.env.OPENAI_API_KEY,
     });
@@ -19,7 +20,10 @@ export class IeltsService {
       const completion = await this.client.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [
-          { role: 'system', content: 'Return ONLY valid JSON without any extra text.' },
+          {
+            role: 'system',
+            content: 'Return ONLY valid JSON without any extra text.',
+          },
           { role: 'user', content: prompt },
         ],
         temperature: 0.2,
@@ -33,8 +37,21 @@ export class IeltsService {
         result = { overall: 0, feedback: 'parse_error' };
       }
 
-      return result; // ⚡ без сохранения истории
-    } catch (e: any) {
+      // 🧠 сохраняем историю IELTS Writing в ChatHistory
+      try {
+        await this.prisma.chatHistory.create({
+          data: {
+            userId: dto.userId,
+            question: `IELTS writing essay (len=${dto.essay.length})`,
+            answer: JSON.stringify(result),
+          },
+        });
+      } catch (error) {
+        console.error('Failed to persist IELTS writing history', error);
+      }
+
+      return result;
+    } catch {
       throw new InternalServerErrorException('Failed to score writing');
     }
   }
@@ -42,10 +59,46 @@ export class IeltsService {
   async scoreReading(dto: IeltsReadingDto) {
     const answerKeys: Record<string, string[]> = {
       'cambridge-16-test-1': [
-        'A','B','C','D','A','C','B','D','A','B',
-        'C','D','A','B','C','D','A','B','C','D',
-        'A','B','C','D','A','B','C','D','A','B',
-        'C','D','A','B','C','D','A','B','C','D'
+        'A',
+        'B',
+        'C',
+        'D',
+        'A',
+        'C',
+        'B',
+        'D',
+        'A',
+        'B',
+        'C',
+        'D',
+        'A',
+        'B',
+        'C',
+        'D',
+        'A',
+        'B',
+        'C',
+        'D',
+        'A',
+        'B',
+        'C',
+        'D',
+        'A',
+        'B',
+        'C',
+        'D',
+        'A',
+        'B',
+        'C',
+        'D',
+        'A',
+        'B',
+        'C',
+        'D',
+        'A',
+        'B',
+        'C',
+        'D',
       ],
     };
 
@@ -54,7 +107,10 @@ export class IeltsService {
     let correct = 0;
 
     for (let i = 0; i < Math.min(total, dto.answers.length); i++) {
-      if ((dto.answers[i] || '').toUpperCase().trim() === (key[i] || '').toUpperCase().trim()) {
+      if (
+        (dto.answers[i] || '').toUpperCase().trim() ===
+        (key[i] || '').toUpperCase().trim()
+      ) {
         correct++;
       }
     }
@@ -67,6 +123,21 @@ export class IeltsService {
     else if (correct >= 23) band = 6;
     else if (correct >= 16) band = 5;
 
-    return { correct, total, band }; // ⚡ без сохранения истории
+    const summary = { correct, total, band };
+
+    // 🧠 сохраняем историю IELTS Reading в ChatHistory
+    try {
+      await this.prisma.chatHistory.create({
+        data: {
+          userId: dto.userId,
+          question: `IELTS reading (${dto.testId}) answers=${dto.answers.join(',')}`,
+          answer: JSON.stringify(summary),
+        },
+      });
+    } catch (error) {
+      console.error('Failed to persist IELTS reading history', error);
+    }
+
+    return summary;
   }
 }

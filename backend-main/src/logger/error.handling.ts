@@ -5,7 +5,7 @@ import {
   ArgumentsHost,
   HttpException,
   HttpStatus,
-} from "@nestjs/common";
+} from '@nestjs/common';
 
 @Catch()
 export class AllExceptionsFilter implements ExceptionFilter {
@@ -27,7 +27,7 @@ export class AllExceptionsFilter implements ExceptionFilter {
       message:
         exception instanceof HttpException
           ? exception.getResponse()
-          : "Internal server error",
+          : 'Internal server error',
       timestamp: new Date().toISOString(),
       path: request.url,
     });

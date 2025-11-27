@@ -23,8 +23,8 @@ export class MessagesService {
     const friendship = await this.prisma.friend.findFirst({
       where: {
         OR: [
-          { userId: fromUserId, friendId: toUserId, status: 'accepted' },
-          { userId: toUserId, friendId: fromUserId, status: 'accepted' },
+          { userId: fromUserId, friendId: toUserId, status: 'ACCEPTED' },
+          { userId: toUserId, friendId: fromUserId, status: 'ACCEPTED' },
         ],
       },
     });
@@ -63,8 +63,8 @@ export class MessagesService {
     const friendship = await this.prisma.friend.findFirst({
       where: {
         OR: [
-          { userId, friendId, status: 'accepted' },
-          { userId: friendId, friendId: userId, status: 'accepted' },
+          { userId, friendId, status: 'ACCEPTED' },
+          { userId: friendId, friendId: userId, status: 'ACCEPTED' },
         ],
       },
     });

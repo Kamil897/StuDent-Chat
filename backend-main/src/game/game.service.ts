@@ -22,4 +22,3 @@ export class GameService {
     return stats?.score ?? 0;
   }
 }
-

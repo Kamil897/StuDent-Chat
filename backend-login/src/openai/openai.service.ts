@@ -17,7 +17,7 @@ export class OpenAIService {
 
   async generateJson(prompt: string, maxTokens = 512) {
     const res = await this.client.chat.completions.create({
-      model: 'gpt-4o-mini',
+      model: 'gpt-4.1-mini',
       messages: [
         { role: 'system', content: 'You reply ONLY with strict JSON. No prose.' },
         { role: 'user', content: prompt },

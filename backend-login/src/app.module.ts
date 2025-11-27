@@ -19,6 +19,9 @@ import { MessagesModule } from './messages/messages.module';
 import { WalletModule } from './wallet/wallet.module';
 import { AnalyticsModule } from './analytics/analytics.module';
 import { IeltsModule } from './ielts/ielts.module';
+import { MemoryModule } from './memory/memory.module';
+import { BillingModule } from './billing/billing.module';
+import { ShopModule } from './shop/shop.module';
 
 @Module({
   imports: [
@@ -38,7 +41,10 @@ import { IeltsModule } from './ielts/ielts.module';
     MessagesModule,
     WalletModule,
     AnalyticsModule,
-    IeltsModule
+    IeltsModule,
+    MemoryModule,
+    BillingModule,
+    ShopModule,
   ],
   controllers: [ChatController],
   providers: [ChatService, PrismaService],

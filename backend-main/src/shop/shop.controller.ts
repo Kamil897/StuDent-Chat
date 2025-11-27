@@ -1,4 +1,10 @@
-import { Controller, Get, Post, Body, BadRequestException } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  BadRequestException,
+} from '@nestjs/common';
 import { ShopService, PRODUCTS } from './shop.service';
 
 @Controller('shop')
@@ -17,7 +23,10 @@ export class ShopController {
   }
 
   @Post('user/add-points')
-  async addPoints(@Body('userId') userId: number, @Body('points') points: number) {
+  async addPoints(
+    @Body('userId') userId: number,
+    @Body('points') points: number,
+  ) {
     if (!userId || typeof points !== 'number' || points <= 0) {
       throw new BadRequestException('Invalid input');
     }

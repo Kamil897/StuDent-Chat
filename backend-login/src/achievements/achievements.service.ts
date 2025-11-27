@@ -81,7 +81,7 @@ export class AchievementsService {
           try {
             await this.unlockAchievement(userId, achievement.id);
             unlockedAchievements.push(achievement);
-          } catch (error) {
+          } catch {
             // Достижение уже получено
           }
         }

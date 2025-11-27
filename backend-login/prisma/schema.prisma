@@ -74,6 +74,11 @@ model User {
 
   histories History[]
   ieltsResults IeltsResult[]
+
+  // back-relations for new models
+  memories        UserMemory[]
+  subscriptions   UserSubscription[]
+  usageCounters   UsageCounter[]
 }
 
 model CogniyaProfile {
@@ -126,6 +131,7 @@ model ServerStatus {
   updatedAt   DateTime @updatedAt
   createdAt   DateTime @default(now())
 }
+
 
 model Report {
   id              Int            @id @default(autoincrement())
@@ -259,6 +265,7 @@ model Friend {
   user   User @relation("UserFriends", fields: [userId], references: [id])
   friend User @relation("FriendOfUsers", fields: [friendId], references: [id])
 
+
   @@unique([userId, friendId])
 }
 
@@ -297,4 +304,57 @@ model IeltsResult {
   user User @relation(fields: [userId], references: [id])
 
   @@index([userId, createdAt])
+}
+
+// Memory for AI personalization per user
+model UserMemory {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  key       String
+  value     Json
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, key])
+}
+
+// Subscription plans like Free/Pro/Premium
+model SubscriptionPlan {
+  id          Int    @id @default(autoincrement())
+  code        String @unique // free | pro | premium
+  name        String
+  dailyLimit  Int
+  priceCents  Int    @default(0)
+  currency    String @default("usd")
+
+  // back-relation
+  userSubscriptions UserSubscription[]
+}
+
+// Active plan per user with billing period
+model UserSubscription {
+  id                 Int      @id @default(autoincrement())
+  userId             Int
+  planId             Int
+  status             String   @default("active") // active | canceled | past_due
+  currentPeriodStart DateTime @default(now())
+  currentPeriodEnd   DateTime
+
+  user User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  plan SubscriptionPlan  @relation(fields: [planId], references: [id])
+
+  @@index([userId])
+}
+
+// Daily usage counter for AI requests
+model UsageCounter {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  date      DateTime // start of UTC day
+  aiRequests Int     @default(0)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, date])
 }

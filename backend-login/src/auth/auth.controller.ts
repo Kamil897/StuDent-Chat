@@ -1,8 +1,7 @@
-import { Body, Controller, Get, Post, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { LoginDto, RegisterDto } from './dto';
 import { JwtAuthGuard } from './jwt-auth.guard';
-import { Request } from 'express';
 import { UsersService } from '../users/users.service'; // 👈 подключаем
 import { GetUser } from './decorators/get-user.decorator';
 import { User } from '@prisma/client';

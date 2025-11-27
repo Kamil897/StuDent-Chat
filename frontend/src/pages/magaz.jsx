@@ -162,9 +162,10 @@ const Magaz = () => {
           return b.price - a.price;
         case "name":
           return t(a.name).localeCompare(t(b.name));
-        case "rarity":
+        case "rarity": {
           const order = { common: 1, rare: 2, legendary: 3 };
           return order[b.rarity] - order[a.rarity];
+        }
         default:
           return 0;
       }

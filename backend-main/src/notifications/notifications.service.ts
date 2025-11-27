@@ -8,18 +8,34 @@ export class NotificationService {
 
   async create(createNotificationDto: CreateNotificationDto) {
     const data: any = {
-      ...(createNotificationDto.parent_id !== null && { parent_id: createNotificationDto.parent_id }),
-      ...(createNotificationDto.message !== null && { message: createNotificationDto.message }),
-      ...(createNotificationDto.sent_at !== null && { sentAt: new Date(createNotificationDto.sent_at) }),
+      ...(createNotificationDto.parent_id !== null && {
+        parent_id: createNotificationDto.parent_id,
+      }),
+      ...(createNotificationDto.message !== null && {
+        message: createNotificationDto.message,
+      }),
+      ...(createNotificationDto.sent_at !== null && {
+        sentAt: new Date(createNotificationDto.sent_at),
+      }),
     };
     return this.prisma.notification.create({ data });
   }
 
   async update(id: number, updateNotificationDto: UpdateNotificationDto) {
     const data = {
-      parent_id: updateNotificationDto.parent_id !== null ? updateNotificationDto.parent_id : undefined,
-      message: updateNotificationDto.message !== null ? updateNotificationDto.message : undefined,
-      sentAt: updateNotificationDto.sent_at !== null && updateNotificationDto.sent_at !== undefined ? new Date(updateNotificationDto.sent_at) : undefined,
+      parent_id:
+        updateNotificationDto.parent_id !== null
+          ? updateNotificationDto.parent_id
+          : undefined,
+      message:
+        updateNotificationDto.message !== null
+          ? updateNotificationDto.message
+          : undefined,
+      sentAt:
+        updateNotificationDto.sent_at !== null &&
+        updateNotificationDto.sent_at !== undefined
+          ? new Date(updateNotificationDto.sent_at)
+          : undefined,
     } as any;
     return this.prisma.notification.update({
       where: { id },
